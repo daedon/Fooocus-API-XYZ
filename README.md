@@ -143,9 +143,9 @@ To make sampler_name one of your variable parameters:
 ```
 "sampler_name": "___sampler_name",
 ```
-* In your parms directory, create a file named `___sampler_name` containing your sampler name values.
+* In your parms directory, create a file named `___sampler_name` containing your sampler_name values.
 * Generate your images.
-* To have sampler_name in all your jobs, do the above to the defaults directories.
+* To have sampler_name in all your jobs, make the above changes to the defaults directories.
 
 #### What's next ?
 
