@@ -75,8 +75,10 @@ What is included in the image name can be configured with saveNameCFG in config.
 ```
 saveNameCFG 0: Image file name contains no parmeters, only jobName, image # and time stamp. 
   myJob_0001_024844
+
 saveNameCFG 1: Image name contains parameter value only.
   myJob_0001_juggernautXLv8Rundiffusion_1024x1024_18_024844
+
 saveNameCFG 2: Image name contains parameter name and value.
   myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844
 ```
