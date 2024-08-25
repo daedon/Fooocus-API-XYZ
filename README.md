@@ -88,6 +88,7 @@ saveNameCFG 2: Image name contains parameter name and Value (as in example above
 * First ancestor of xyz started out as 6 lines of bash. Grew grew grew.
 * Linux only at this time
 * My first git project
+* Still learning markup
 * My first github project
 * My first python project
 * Getting to that 1st push was painful, wish I knew about this sooner:
