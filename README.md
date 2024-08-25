@@ -76,7 +76,7 @@ Generate the 12 images now ? (y/n) y
 ```
 What is included in the image name can be configured with saveNameCFG in config.py
 ```
-saveNameCFG 0: Image file name contains no parmeters, only jobName, image # and time stamp. 
+saveNameCFG 0: Image file name contains no parameters, only jobName, image # and time stamp. 
   myJob_0001_024844
 
 saveNameCFG 1: Image name contains parameter value only.
@@ -87,12 +87,12 @@ saveNameCFG 2: Image name contains parameter name and value.
 ```
 
 #### Preamble
-* First ancestor of xyz started out as 6 lines of bash. Grew grew grew.
-* Linux only at this time
-* My first git project
-* Still learning markup
-* My first github project
-* My first python project
+* This project started out as 6 lines of bash.
+* Linux only at this time.
+* My first git project.
+* Still learning markup.
+* My first github project.
+* My first python project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
 ```
 git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git
@@ -109,7 +109,7 @@ git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.g
 * The 1st 3 characters of each file are discarded.
 * The files are read in alphabetical order, hence the first 3 characters decide the order of the permutations.
 * An array variable is created for each parameter with the same name.
-* The contents of each parameter file is read line by line into the elements of the cooresponing array/list.
+* The contents of each parameter file is read line by line into the elements of the corresponding array/list.
 * Empty lines are ignored.
 * Lines beginning with a "#" are comments and ignored.
 * No parameter values are read after a line with a "."
@@ -117,11 +117,13 @@ git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.g
 * For each permutation of all the values, Fooocus-API-XYZ makes a curl call to fooocus-API.
 * For each permutation, substitutes all "___parameters" in "curl.template", writes to and executes "runCURL".
 
-#### Configuring / customizing
+#### Configuring
 
 See config.py
 
-The curl template has close to 100 parameters, onyla dozen or so which are included by default.
+#### Customizing
+
+The curl template has close to 100 parameters, only a dozen or so are set up by default.
 
 For example, "sampler_name" is hard coded in the curl job template. 
 
@@ -129,16 +131,9 @@ For example, "sampler_name" is hard coded in the curl job template.
 "sampler_name": "dpmpp_2m_sde_gpu",
 ```
 
-To make sampler_name a variable, 
-* Edit curl.templae and replace "dpmpp_2m_sde_gpu" with "___sampler_name"
+To make sampler_name a variable parameter:
+* Edit curl.template and replace "dpmpp_2m_sde_gpu" with "___sampler_name"
 * In your parms directory, create a file named "___sampler_name" containing your sample names.
 * Generate images.
-* To have sampler_name in all your jobs, do the above to in the defaults directories.
-**  Create
-
-
-" "Adding your own parameters
-** The culrl 
-
-
+* To have sampler_name in all your jobs, do the above to the defaults directories.
 
