@@ -17,6 +17,11 @@ The first time you use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs"
 * Associated sub-directories will be created
 * Default files will be copied to "jobs/myJobName"
+* A sample job named myJob is included, to run it:
+```
+cd Fooocus-API-XYZ
+python3 xyz.py myJob
+```
 
 You can then go into "jobs/myJobName/parms" and modify parameter values.
 
