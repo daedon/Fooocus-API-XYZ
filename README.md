@@ -28,25 +28,24 @@ You can then go into "jobs/myJob/parms" and modify the parameters.
 #### 3 Parameter files included in sample myJob
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
 
-File: "../parms/_1_base_model"
+File: "../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model"
 ```
 juggernautXL_v8Rundiffusion.safetensors
 realisticStockPhoto_v20.safetensors
 ```
-File: "../parms/_2_resolution"
+File: "../Fooocus-API-XYZ/jobs/myJob/parms/_2_resolution"
 ```
 1024*1536
 1536*1024
 ```
-File: "../parms/_3_steps"
+File: "../Fooocus-API-XYZ/jobs/myJob/parms/_3_steps"
 ```
 18
 19
 20
 ```
+Note that the numbers in the names will determine the order the permutations (and images) are generated
 The above parameter files will generate the following output and image names.
-Note that the numbers in the names will determine the order the permutations are created.
-
 ```
 Job "myJob" has 13 parameters:
   ['base_model', 'resolution', 'steps', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
