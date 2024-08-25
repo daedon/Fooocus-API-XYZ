@@ -100,10 +100,10 @@ saveNameCFG 2: Image name contains parameter name and value.
 * Requires `Fooocus-API` to be running.
 * Reads parameter files in a job's "parms" subdirectory.
 * Files are stored in "jobs/myJobName".
-* Each file represents a Fooocus parameter: eg, ___steps, ___resolution, ___prompt, ___base_model.
-* Each line in file represents a parameter value (see examples above)
-* The 1st character of each file must be an underscore "_".
-* The 1st 3 characters of each file are used for documentation and/or sorting purposes.
+* Each file represents a Fooocus parameter: eg, `___steps`, `___resolution`, `___prompt`, `___base_model`.
+* Each parameter file line represents 1 value for that a parameter.
+* The 1st character of each file name must be an underscore "_".
+* The 1st 3 characters of each file name are used for documentation and/or sorting purposes only.
 * The 1st 3 characters of each file are discarded.
 * The files are read in alphabetical order, hence the first 3 characters decide the order of the permutations.
 * An array variable is created for each parameter with the same name.
@@ -113,11 +113,15 @@ saveNameCFG 2: Image name contains parameter name and value.
 * No parameter values are read after a line with a "."
 * Fooocus-API-XYZ generates all permutations of the parameter values in the order they were read.
 * For each permutation of all the values, Fooocus-API-XYZ makes a curl call to fooocus-API.
-* For each permutation, substitutes all "___parameters" in "curl.template", writes to and executes "runCURL".
+* For each permutation, substitutes all `___parameters` in `curl.template`, writes to and executes `runCURL`.
 
 #### Configuring
 
-See `config.py`
+Directory locations and other parameters can be changed in `config.py`.
+
+If `image_number` is set to 10, Fooocus will generate 10 images per curl call, images having sequential seed numbers.
+To create N images with random seeds, insert 10 lines in `___seed` each with a `-1`.
+
 
 #### Customizing
 
