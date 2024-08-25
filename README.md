@@ -72,7 +72,7 @@ Generate the 12 images now ? (y/n) y
 ```
 What is included in the image name can be configured with saveNameCFG in config.py
 * saveNameCFG 0: Image name contains no parmeters in the file name
-```myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844```
+ ```myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844```
 
 * saveNameCFG 1: Image name contains parameter Value only
 * saveNameCFG 2: Image name contains parameter name and Value (as in example above)
