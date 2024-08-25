@@ -139,9 +139,12 @@ For example, "sampler_name" is hard coded in the curl job template.
 ```
 
 To make sampler_name one of your variable parameters:
-* Edit curl.template and replace `dpmpp_2m_sde_gpu` with `___sampler_name` (keep the quotes).
-* In your parms directory, create a file named `___sampler_name` containing your sampler name values.
-* Generate images.
+* 1. Edit curl.template and replace `dpmpp_2m_sde_gpu` with `___sampler_name` (keep the quotes).
+```
+"sampler_name": "___sampler_name",
+```
+* 2. In your parms directory, create a file named `___sampler_name` containing your sampler name values.
+* 3. Generate your images.
 * To have sampler_name in all your jobs, do the above to the defaults directories.
 
 #### What's next ?
