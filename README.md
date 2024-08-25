@@ -7,7 +7,9 @@ Similar to Stable Diffusion Plot-XYZ
 
 get it 
 
-> git clone https://github.com/daedon/fapi
+```
+git clone https://github.com/daedon/fapi
+```
 
 run it
 ```
