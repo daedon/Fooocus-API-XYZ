@@ -64,7 +64,7 @@ curl -X 'POST' \
     "skipping_cn_preprocessor": false,
     "vae_name": "Default (model)"
   },
-  "save_name": "myJob_0012_base_model_realisticStockPhotov20_resolution_1280x1280_steps_20_023528",
+  "save_name": "myJob_0012_base_model_realisticStockPhotov20_resolution_1280x1280_steps_20_024844",
   "save_meta": true,
   "meta_scheme": "fooocus",
   "save_extension": "png",
