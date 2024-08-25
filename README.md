@@ -1,6 +1,5 @@
-# Fooocus-API-XYZ 
-## Variable Parameter Fooocus Image generator
-### Fooocus-API-XYZ generates Fooocus images with unrestricted parameter variations.
+### Fooocus-API-XYZ Variable Parameter Fooocus Image generator
+#### Generates Fooocus Images with unrestricted parameter variations.
 
 Reads values from parameter files and generates images for each permutation (see simple example after Quick Start).
 
