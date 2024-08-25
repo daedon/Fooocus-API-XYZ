@@ -5,14 +5,10 @@ Similar to Stable Diffusion Plot-XYZ
 
 #### Quick start
 get it 
- '''
- git clone https://github.com/daedon/fapi
- '''
+> git clone https://github.com/daedon/fapi
 run it
- '''
- cd xyz
- python3 xyz.py <jobName>
- '''
+> cd xyz
+> python3 xyz.py <jobName>
 
 The first time you use a jobName, 
 * A directory with the job's name will be created in"jobs"
