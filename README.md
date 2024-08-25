@@ -119,8 +119,9 @@ saveNameCFG 2: Image name contains parameter name and value.
 
 Directory locations and other parameters can be changed in `config.py`.
 
-If `image_number` is set to 10, Fooocus will generate 10 images per curl call, images having sequential seed numbers.
-To create N images with random seeds, insert 10 lines in `___seed` each with a `-1`.
+If `image_number` is set to N, Fooocus will generate N images per curl call with sequential seed numbers.
+
+To reduce repetiion in large permuations and create N images with random seeds, insert N lines in `___seed` each with a `-1`.
 
 
 #### Customizing
@@ -135,7 +136,7 @@ For example, "sampler_name" is hard coded in the curl job template.
 
 To make sampler_name one of your variable parameters:
 * Edit curl.template and replace `dpmpp_2m_sde_gpu` with `___sampler_name`
-* In your parms directory, create a file named `___sampler_name` containing your sample names.
+* In your parms directory, create a file named `___sampler_name` containing your sampler names.
 * Generate images.
 * To have sampler_name in all your jobs, do the above to the defaults directories.
 
