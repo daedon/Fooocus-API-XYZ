@@ -25,33 +25,37 @@ The first time you use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs".
 * Associated sub-directories will be created.
 * Default files will be copied to "jobs/newJobName".
-* Modify parameters in "jobs/myJob/parms".
-* Change parameters for all your future jobs in `defaults` directories.
+* Add,Modify,Delete parameters in "jobs/myJob/parms".
+* Set default parameters for all future jobs in `defaults` directories.
 
 #### A simple example with 3 Parameter files (included in sample myJob)
-xyz will generate all permutations of the following parameters a make curl calls to Fooocus-API.
+xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
+Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory.
 
-`FILE ../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model`
+`FILE: _1_base_model`
 ```
+# 2 Base Models
 juggernautXL_v8Rundiffusion.safetensors
 realisticStockPhoto_v20.safetensors
 ```
-`FILE ../Fooocus-API-XYZ/jobs/myJob/parms/_2_resolution`
+`FILE: _2_resolution`
 ```
+# 2 Resolutions
 1024*1536
 1536*1024
 ```
-`FILE ../Fooocus-API-XYZ/jobs/myJob/parms/_3_steps`
+`FILE: _3_steps`
 ```
+# 3 Steps
 18
 19
 20
 ```
 
-Note that the numbers in the file names determine the order the permutations and images are generated. 
+Note that the numbers prefixing the file names determine the order the images will be generated. 
 
-The above parameter files will generate the following output and image names.
+The above parameter files will generate the following output. 
 ```
 Job "myJob" has 13 parameters:
   ['base_model', 'resolution', 'steps', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
@@ -76,15 +80,15 @@ Generate the 12 images now ? (y/n) y
 "myJob_0011_base_model_realisticStockPhotov20_resolution_1280x1280_steps_19_024844"
 "myJob_0012_base_model_realisticStockPhotov20_resolution_1280x1280_steps_20_024844"
 ```
-What is included in the image name can be configured with saveNameCFG in config.py
+The save_name (image file name) can be configured with saveNameCFG in config.py:
 ```
-saveNameCFG 0: Image file name contains no parameters, only jobName, image # and time stamp. 
+saveNameCFG = 0: Image file name contains no parameters, only jobName, image # and time stamp. 
   myJob_0001_024844
 
-saveNameCFG 1: Image name contains parameter value only.
+saveNameCFG = 1: Image name contains only the parameter value.
   myJob_0001_juggernautXLv8Rundiffusion_1024x1024_18_024844
 
-saveNameCFG 2: Image name contains parameter name and value.
+saveNameCFG = 2: Image name contains both parameter name and value.
   myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844
 ```
 
