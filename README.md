@@ -86,7 +86,7 @@ saveNameCFG 2: Image name contains parameter name and value.
   myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844
 ```
 
-#### Preamble
+#### Miscellaneous
 * This project started out as 6 lines of bash.
 * Linux only at this time.
 * My first git project.
@@ -94,12 +94,10 @@ saveNameCFG 2: Image name contains parameter name and value.
 * My first github project.
 * My first python project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
-```
-git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git
-```
+`git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
 
 #### Summary
-* Requires Fooocus-API to be running.
+* Requires `Fooocus-API` to be running.
 * Reads parameter files in a job's "parms" subdirectory.
 * Files are stored in "jobs/myJobName".
 * Each file represents a Fooocus parameter: eg, ___steps, ___resolution, ___prompt, ___base_model.
@@ -119,7 +117,7 @@ git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.g
 
 #### Configuring
 
-See config.py
+See `config.py`
 
 #### Customizing
 
@@ -131,9 +129,9 @@ For example, "sampler_name" is hard coded in the curl job template.
 "sampler_name": "dpmpp_2m_sde_gpu",
 ```
 
-To make sampler_name a variable parameter:
-* Edit curl.template and replace "dpmpp_2m_sde_gpu" with "___sampler_name"
-* In your parms directory, create a file named "___sampler_name" containing your sample names.
+To make sampler_name one of your variable parameters:
+* Edit curl.template and replace `dpmpp_2m_sde_gpu` with `___sampler_name`
+* In your parms directory, create a file named `___sampler_name` containing your sample names.
 * Generate images.
 * To have sampler_name in all your jobs, do the above to the defaults directories.
 
