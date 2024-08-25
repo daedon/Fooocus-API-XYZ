@@ -21,23 +21,50 @@ The first time you use a jobName,
 You can then go into "jobs/myJobName/parms" and modify parameter values
 * Sample parameter file
 
-#### Sample
-* file _1_resolution
+#### 3 Sample parameter files
+
+* file "../parms/_1_base_model"
 ```
-1024*1024
-1536*1024
+juggernautXL_v8Rundiffusion.safetensors
+realisticStockPhoto_v20.safetensors
+```
+* file "../parms/_2_resolution"
+```
 1024*1536
-1536*1536
-# Comments start with a "# and are ignored.
-# Empty lines are ignored
-# Hence this file has 4 parameters parameter
-# No parameters are read beyond a line with a period.
-# Nothing is read beyond the "." in the next line
-.
-512*512
-640*640
-768*768
+1536*1024
 ```
+* file "../parms/_3_steps"
+```
+18
+19
+20
+```
+
+```
+Job "myJob" has 13 parameters:
+  ['base_model', 'resolution', 'steps', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
+The following parameters have more than one value:
+  resolution[2] 
+  steps[3] 
+  refiner_model[2] 
+Fooocus "image_number" is set to 1 image per Curl call
+12 Curl calls will be made.
+12 images will be generated (2 * 3 * 2 * 1)
+Generate the 12 images now ? (y/n) y
+"myJob_0001_resolution_1024x1024_steps_18_refiner_model_realisticStockPhotov20_023332"
+"myJob_0002_resolution_1024x1024_steps_18_refiner_model_juggernautXLv8Rundiffusion_023332"
+"myJob_0003_resolution_1024x1024_steps_19_refiner_model_realisticStockPhotov20_023332"
+"myJob_0004_resolution_1024x1024_steps_19_refiner_model_juggernautXLv8Rundiffusion_023332"
+"myJob_0005_resolution_1024x1024_steps_20_refiner_model_realisticStockPhotov20_023332"
+"myJob_0006_resolution_1024x1024_steps_20_refiner_model_juggernautXLv8Rundiffusion_023332"
+"myJob_0007_resolution_1280x1280_steps_18_refiner_model_realisticStockPhotov20_023332"
+"myJob_0008_resolution_1280x1280_steps_18_refiner_model_juggernautXLv8Rundiffusion_023332"
+"myJob_0009_resolution_1280x1280_steps_19_refiner_model_realisticStockPhotov20_023332"
+"myJob_0010_resolution_1280x1280_steps_19_refiner_model_juggernautXLv8Rundiffusion_023332"
+"myJob_0011_resolution_1280x1280_steps_20_refiner_model_realisticStockPhotov20_023332"
+"myJob_0012_resolution_1280x1280_steps_20_refiner_model_juggernautXLv8Rundiffusion_023332"
+```
+
 
 
 

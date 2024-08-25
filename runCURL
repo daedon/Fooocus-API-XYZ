@@ -4,19 +4,19 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "prompt":                 "8K Resolution, Sexy Asian woman with ((tiny tiny breasts)). messy oily brown hair with blonde streaks, tanned, (realistic pores). (realistic skin). looking at camera. full body shot, seducing, in a hotel room, intricate, elegant, highly detailed, extremely nice quality, dramatic light, sharp focus, color, very beautiful, ambient background, on a sail boat",
-  "negative_prompt":        "bad body proportions, 6 toes. 5 fingers. 3 fingers. goo on skin, artifacts on skin,unrealistic, saturated, high contrast, big nose, painting, drawing, sketch, cartoon, anime, manga, render, CG, 3d, watermark, signature, label",
+  "prompt":                 "8k Resolution, photo-realistic, sailing on a sunny day with a clear blue sky, consistent water horizon",
+  "negative_prompt":        "unrealistic, saturated, high contrast, painting, drawing, sketch, cartoon, anime, manga, render, CG, 3d, watermark, signature, labels",
   "style_comment":          "genMetadata includes the [ ] around the styles",  
-  "style_selections":        ["Fooocus V2", "Fooocus Enhance", "Fooocus Sharp"],
+  "style_selections":        ["Photo Iphone Photographic"],
   "performance_selection":  "Speed",
   "aspect_ratios_selection":"1280*1280",
   "image_number":            1,
-  "image_seed":              1172607827953229201,
-  "sharpness":               2,
-  "guidance_scale":          4,
-  "base_model_name":        "juggernautXL_v8Rundiffusion.safetensors",
-  "refiner_model_name":     "mklanXXXNSFWVersion_mklan2159XXX.safetensors",
-  "refiner_switch":          0.758,
+  "image_seed":              -1,
+  "sharpness":               2.0,
+  "guidance_scale":          2.0,
+  "base_model_name":        "realisticStockPhoto_v20.safetensors",
+  "refiner_model_name":     "None",
+  "refiner_switch":          1.0,
   "loras": [
     { "enabled": true, "model_name": "Doll Likeness DollLikenessv1.safetensors", "weight": 1 },
     { "enabled": true, "model_name": "None", "weight": 1 },
@@ -24,7 +24,7 @@ curl -X 'POST' \
     { "enabled": true, "model_name": "None", "weight": 1 },
     { "enabled": true, "model_name": "None", "weight": 1 } ],
   "advanced_params": {
-    "overwrite_step":        32,
+    "overwrite_step":        20,
     "adaptive_cfg": 7.06,
     "adm_scaler_end": 0.3,
     "adm_scaler_negative": 0.8,
@@ -64,7 +64,7 @@ curl -X 'POST' \
     "skipping_cn_preprocessor": false,
     "vae_name": "Default (model)"
   },
-  "save_name": "girl_0001_052512",
+  "save_name": "myJob_0012_base_model_realisticStockPhotov20_resolution_1280x1280_steps_20_023528",
   "save_meta": true,
   "meta_scheme": "fooocus",
   "save_extension": "png",
