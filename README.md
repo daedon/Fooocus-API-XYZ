@@ -28,10 +28,9 @@ The first time you use a jobName:
 * Add,Modify,Delete parameters in "jobs/myJob/parms".
 * Set default parameters for all future jobs in `defaults` directories.
 
-#### A simple example with 3 multi-parameter files (included in sample myJob)
-xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
+#### A simple example with 3 parameter files that have more than 1 value is included in sample the sample myJob.
 
-The following parameters will generate 12 curl calls and 12 images (image_number = 1).
+xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory.
 
