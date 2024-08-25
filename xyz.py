@@ -149,7 +149,7 @@ def generateImages( jobName):
              f.write( template)
         os.chmod( 'runCURL', 0o755)                             # Make template executable
         print(f"{barCharacter * 100}")
-        print(f"Curl {currentCurlCall} of {totalCurlCalls} ({image_number} image{S(image_number)} will be generated)")
+        print(f"Curl {currentCurlCall} of {totalCurlCalls}")
         print(f"save_name: \"{fName}\"\n")
         ############################################################################################################
 
