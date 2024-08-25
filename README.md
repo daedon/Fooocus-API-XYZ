@@ -28,17 +28,17 @@ You can then go into "jobs/myJob/parms" and modify the parameters.
 #### 3 Parameter files included in sample myJob
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
 
-File: "../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model"
+"../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model"
 ```
 juggernautXL_v8Rundiffusion.safetensors
 realisticStockPhoto_v20.safetensors
 ```
-File: "../Fooocus-API-XYZ/jobs/myJob/parms/_2_resolution"
+"../Fooocus-API-XYZ/jobs/myJob/parms/_2_resolution"
 ```
 1024*1536
 1536*1024
 ```
-File: "../Fooocus-API-XYZ/jobs/myJob/parms/_3_steps"
+"../Fooocus-API-XYZ/jobs/myJob/parms/_3_steps"
 ```
 18
 19
@@ -70,10 +70,12 @@ Generate the 12 images now ? (y/n) y
 "myJob_0011_base_model_realisticStockPhotov20_resolution_1280x1280_steps_19_024844"
 "myJob_0012_base_model_realisticStockPhotov20_resolution_1280x1280_steps_20_024844"
 ```
-What is included in the image name can be configred with saveNameCFG in config.py
-* 0: No parmeters in the file name
-* 1: Parmeter Value only
-* 2: Parmeter anme and Value
+What is included in the image name can be configured with saveNameCFG in config.py
+* saveNameCFG 0: Image name contains no parmeters in the file name
+```myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844```
+
+* saveNameCFG 1: Image name contains parameter Value only
+* saveNameCFG 2: Image name contains parameter name and Value (as in example above)
 
 #### Preamble
 * First ancestor of xyz started out as 6 lines of bash. Grew grew grew.
