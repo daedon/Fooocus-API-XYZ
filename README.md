@@ -47,7 +47,7 @@ realisticStockPhoto_v20.safetensors
 20
 ```
 
-Note that the numbers in the names will determine the order the permutations (and images) are generated. 
+Note that the numbers in the file names determine the order the permutations and images are generated. 
 
 The above parameter files will generate the following output and image names.
 ```
