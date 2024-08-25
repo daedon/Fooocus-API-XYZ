@@ -30,7 +30,9 @@ The first time you use a jobName:
 
 #### A simple example with 3 multi-parameter files (included in sample myJob)
 xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
-The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
+
+The following parameters will generate 12 curl calls and 12 images (image_number = 1).
+
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory.
 
 `FILE: _1_base_model`
