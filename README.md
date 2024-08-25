@@ -8,8 +8,7 @@ Reads values from parameter files and generates images for every permutation of 
 #### Quick Start
 
 Requires Fooocus-API installed and running.
-[Fooocus-API](https://github.com/mrhan1993/Fooocus-API){:target="_blank"}
-
+[Fooocus-API](https://github.com/mrhan1993/Fooocus-API){target="_blank"}
 Get it 
 ```
 git clone https://github.com/daedon/Fooocus-API-XYZ
