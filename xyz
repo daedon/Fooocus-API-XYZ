@@ -1,4 +1,4 @@
 #!/bin/bash
+# Sample bash file
 cd ~/_python_/Fooocus-API-XYZ
-p3 ./xyz.py $*
-
+python3 ./xyz.py $*
