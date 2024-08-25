@@ -53,9 +53,9 @@ realisticStockPhoto_v20.safetensors
 20
 ```
 
-Note that the characters in the 1st 3 positions of the file names determine the order the images will be generated. 
+Note that the characters in the first 3 positions of the file name determines the order the images will be generated. 
 
-The above parameter files will generate the following output. 
+The above parameter files will generate the following output:
 ```
 Job "myJob" has 13 parameters:
   ['base_model', 'resolution', 'steps', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
@@ -95,18 +95,6 @@ Separators can be modified in `config.py`, for example, the above file names cou
 ```
 "myJob_0012----base_model=realisticStockPhotov20----resolution=1280x1280----steps_20_024844"
 ```
-
-
-#### Miscellaneous
-* This project started out as 6 lines of bash.
-* Linux only at this time.
-* My first git project.
-* Still learning markup.
-* My first github project.
-* My first python project.
-* Getting to that 1st push was painful, wish I knew about this sooner:
-`git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
-
 #### Summary
 * Requires `Fooocus-API` to be running.
 * Reads parameter files in a job's "parms" subdirectory.
@@ -154,4 +142,15 @@ To make sampler_name one of your variable parameters:
 #### What's next ?
 
 A Gradio interface for this project.
+
+#### Miscellaneous
+* This project started out as 6 lines of bash.
+* Linux only at this time.
+* My first git project.
+* Still learning markup.
+* My first github project.
+* My first python project.
+* Getting to that 1st push was painful, wish I knew about this sooner:
+`git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
+
 
