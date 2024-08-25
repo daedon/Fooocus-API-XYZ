@@ -148,25 +148,25 @@ def generateImages( jobName):
         with open( 'runCURL', 'w') as f:                        # Save template
              f.write( template)
         os.chmod( 'runCURL', 0o755)                             # Make template executable
-#        print(f"{barCharacter * 100}")
-#        print(f"Curl {currentCurlCall} of {totalCurlCalls}")
+        print(f"{barCharacter * 100}")
+        print(f"Curl {currentCurlCall} of {totalCurlCalls}")
         print(f"save_name: \"{fName}\"")
         ############################################################################################################
-#        status= os.system( f"./runCURL >{logsDirectory}/{fName}.curl.log >>{logsDirectory}/{fName}.curl.log")
+        status= os.system( f"./runCURL >{logsDirectory}/{fName}.curl.log >>{logsDirectory}/{fName}.curl.log")
         if saveCurlFiles:
            shutil.copy( 'runCURL', os.path.join( curlDirectory, fName))
         if saveDumpFiles:
            with open( f"{dumpDirectory}/{fName}.parms", 'w') as dFile:   
              dFile.write( parmDump)
-#        if status != 0:
-#           print(f"\nExit status: {status}")
-#           sys.exit( 1)
+        if status != 0:
+           print(f"\nExit status: {status}")
+           sys.exit( 1)
         secondsPerCurl   = (int(time.time() - startTime)) / currentCurlCall
         secondsPerImage  = secondsPerCurl / image_number
         imagesRemaining  = totalImages - (currentCurlCall * image_number)
         if imagesRemaining > 0:
            timeRemaining= timeInDHMS( int(imagesRemaining * secondsPerImage))
-#           print( f"{imagesRemaining} image{S(imagesRemaining)} remaining, ESTIMATED time remaining: {timeRemaining}")
+           print( f"{imagesRemaining} image{S(imagesRemaining)} remaining, ESTIMATED time remaining: {timeRemaining}")
 
     return currentCurlCall
 
