@@ -1,5 +1,6 @@
 ### A Fooocus image generator front end for Fooocus-API
 Reads Fooocus-API parameters and generates images for all permutations
+
 Similar to Stable Diffusion Plot-XYZ
 
 #### Quick start
