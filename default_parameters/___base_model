@@ -1,5 +1,4 @@
 juggernautXL_v8Rundiffusion.safetensors
-realisticStockPhoto_v20.safetensors
 
 # Comments start with a cross-hatch and are ignored.
 
@@ -9,4 +8,6 @@ realisticStockPhoto_v20.safetensors
 
 # This file has 2 parameters
 
+.
+realisticStockPhoto_v20.safetensors
 
