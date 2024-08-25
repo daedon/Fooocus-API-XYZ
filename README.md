@@ -1,6 +1,8 @@
-A Fooocus image generator front end for Fooocus-API
+### A Fooocus image generator front end for Fooocus-API
+Reads Fooocus-API parameters and generates images for all permutations
+Similar to Stable Diffusion Plot-XYZ
 
-###Quick start
+#### Quick start
 get it 
  '''
  git clone https://github.com/daedon/fapi
@@ -17,14 +19,12 @@ The first time you use a jobName,
 * Default files will be copied to job
 
 You can then go into "jobs/<jobName>/parms" and modify the parameter values
-### Preamble
+#### Preamble
 My first github project.
 My first python project.
 First ancestor of xyz was written in bash.
 
-
-
-### Details
+#### Details
 fapi 
 * will get a name upgrade
 * fapi requires Fooocus-API to be running
