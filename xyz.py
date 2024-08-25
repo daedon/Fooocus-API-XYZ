@@ -1,7 +1,4 @@
-#08-24_0334
-# git pull on fooocus-API
-# Acknowledgements
-# This project was developed with help from ChatGPT
+#git
 
 import os
 import re
