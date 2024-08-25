@@ -28,7 +28,7 @@ The first time you use a jobName:
 * Add,Modify,Delete parameters in "jobs/myJob/parms".
 * Set default parameters for all future jobs in `defaults` directories.
 
-#### A simple example with 3 Parameter files (included in sample myJob)
+#### A simple example with 3 multi-parameter files (included in sample myJob)
 xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory.
@@ -91,6 +91,11 @@ saveNameCFG = 1: Image name contains only the parameter value.
 saveNameCFG = 2: Image name contains both parameter name and value.
   myJob_0001_base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_18_024844
 ```
+
+If `saveNameCFG` is 1 or 2, parameters with more than 1 value (taht vary) will automatically be incldued in the file name.
+
+To force the inclusion of a parameter that has only one value and doesn't vary, terminate the file name with an "_", eg `___seed_`.
+
 Separators can be modified in `config.py`, for example, the above file names could have been:
 ```
 "myJob_0012----base_model=realisticStockPhotov20----resolution=1280x1280----steps_20_024844"
