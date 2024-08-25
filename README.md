@@ -9,7 +9,7 @@ Reads values from parameter files and generates images for every permutation of 
 
 Requires Fooocus-API installed and running.
 
-Get it 
+Get Fooocus-API-XYZ
 ```
 git clone https://github.com/daedon/Fooocus-API-XYZ
 ```
