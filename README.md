@@ -4,9 +4,13 @@ Reads Fooocus-API parameters and generates images for all permutations
 Similar to Stable Diffusion Plot-XYZ
 
 #### Quick start
+
 get it 
+
 > git clone https://github.com/daedon/fapi
+
 run it
+
 > cd xyz
 > python3 xyz.py <jobName>
 
