@@ -42,16 +42,16 @@ realisticStockPhoto_v20.safetensors
 ```
 `FILE: _2_resolution`
 ```
-# 2 Resolutions
-1024*1536
-1536*1024
+# 3 Resolutions
+512*512
+640*640
+1024*1024
 ```
-`FILE: _3_steps`
+`FILE: _3_guidance_scale`
 ```
-# 3 Steps
-18
-19
-20
+# 2 guidance scales
+2.0
+3.0
 ```
 
 Note that the characters in the first 3 positions of the file name determines the order the images will be generated. 
@@ -59,27 +59,27 @@ Note that the characters in the first 3 positions of the file name determines th
 The above parameter files will generate the following output:
 ```
 Job "myJob" has 13 parameters:
-  ['base_model', 'resolution', 'steps', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
+  ['steps', 'base_model', 'resolution', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
 The following parameters have more than one value:
-  base_model[2]     # juggernautXL_v8Rundiffusion.safetensors, realisticStockPhoto_v20.safetensors
-  resolution[2]     # 1024*1536, 1536*1024
-  steps[3]          # 18, 19, 20
+  base_model[2] 
+  resolution[3] 
+  guidance_scale[2] 
 Fooocus "image_number" is set to 1 image per Curl call
 12 Curl calls will be made.
-12 images will be generated (2 * 2 * 3 * 1)
+12 images will be generated (2 * 3 * 2 * 1)
 Generate the 12 images now ? (y/n) y
-"myJob_0001__base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_18_024844"
-"myJob_0002__base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_19_024844"
-"myJob_0003__base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_20_024844"
-"myJob_0004__base_model_juggernautXLv8Rundiffusion__resolution_1280x1280__steps_18_024844"
-"myJob_0005__base_model_juggernautXLv8Rundiffusion__resolution_1280x1280__steps_19_024844"
-"myJob_0006__base_model_juggernautXLv8Rundiffusion__resolution_1280x1280__steps_20_024844"
-"myJob_0007__base_model_realisticStockPhotov20__resolution_1024x1024__steps_18_024844"
-"myJob_0008__base_model_realisticStockPhotov20__resolution_1024x1024__steps_19_024844"
-"myJob_0009__base_model_realisticStockPhotov20__resolution_1024x1024__steps_20_024844"
-"myJob_0010__base_model_realisticStockPhotov20__resolution_1280x1280__steps_18_024844"
-"myJob_0011__base_model_realisticStockPhotov20__resolution_1280x1280__steps_19_024844"
-"myJob_0012__base_model_realisticStockPhotov20__resolution_1280x1280__steps_20_024844"
+"myJob_0001_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_512x512_guidance_scale_2.0_082317"
+"myJob_0002_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_512x512_guidance_scale_3.0_082317"
+"myJob_0003_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_640x640_guidance_scale_2.0_082317"
+"myJob_0004_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_640x640_guidance_scale_3.0_082317"
+"myJob_0005_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_guidance_scale_2.0_082317"
+"myJob_0006_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_guidance_scale_3.0_082317"
+"myJob_0007_steps_25_base_model_realisticStockPhotov20_resolution_512x512_guidance_scale_2.0_082317"
+"myJob_0008_steps_25_base_model_realisticStockPhotov20_resolution_512x512_guidance_scale_3.0_082317"
+"myJob_0009_steps_25_base_model_realisticStockPhotov20_resolution_640x640_guidance_scale_2.0_082317"
+"myJob_0010_steps_25_base_model_realisticStockPhotov20_resolution_640x640_guidance_scale_3.0_082317"
+"myJob_0011_steps_25_base_model_realisticStockPhotov20_resolution_1024x1024_guidance_scale_2.0_082317"
+"myJob_0012_steps_25_base_model_realisticStockPhotov20_resolution_1024x1024_guidance_scale_3.0_082317"
 ```
 The save_name (image file name) can be configured with saveNameCFG in config.py:
 ```

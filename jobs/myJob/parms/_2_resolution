@@ -1,11 +1,13 @@
+512*512
+640*640
 1024*1024
-1280*1280
 
 # Comments start with a cross-hatch and are ignored.
 # Empty lines are ignored
 # No parameters are read beyond a line with a period.
 # Hence this file has only one parameter
 .
+1280*1280
 
 1536*1280
 1280*1536
