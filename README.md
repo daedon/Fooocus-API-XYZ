@@ -1,4 +1,4 @@
-### A Fooocus image generator front end for Fooocus-API
+### A Fooocus image generator command line front end for Fooocus-API
 Reads Fooocus parameters and generates images for all permutations
 
 Requires Fooocus-API installed and running.
@@ -27,6 +27,7 @@ The first time you use a jobName:
 * Change parameters for all your future jobs in `defaults` directories.
 
 #### A simple example with 3 Parameter files (included in sample myJob)
+xyz will generate all permutations of the following parameters a make curl calls to Fooocus-API.
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
 
 `FILE ../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model`
@@ -45,6 +46,7 @@ realisticStockPhoto_v20.safetensors
 19
 20
 ```
+
 Note that the numbers in the names will determine the order the permutations (and images) are generated. 
 
 The above parameter files will generate the following output and image names.
@@ -132,4 +134,8 @@ To make sampler_name one of your variable parameters:
 * In your parms directory, create a file named `___sampler_name` containing your sample names.
 * Generate images.
 * To have sampler_name in all your jobs, do the above to the defaults directories.
+
+#### What's next ?
+
+A Gradio interface for this project.
 
