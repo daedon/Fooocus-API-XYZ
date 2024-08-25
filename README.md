@@ -92,9 +92,9 @@ saveNameCFG = 2: Image name contains both parameter name and value.
   myJob_0001_base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_18_024844
 ```
 
-If `saveNameCFG` is 1 or 2, parameters with more than 1 value (taht vary) will automatically be incldued in the file name.
+If `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in the file name.
 
-To force the inclusion of a parameter that has only one value and doesn't vary, terminate the file name with an "_", eg `___seed_`.
+To force the inclusion of a parameter with only one value, terminate the parameter's file name with an "_", eg `___seed_`.
 
 Separators can be modified in `config.py`, for example, the above file names could have been:
 ```
