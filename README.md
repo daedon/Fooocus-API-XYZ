@@ -19,6 +19,28 @@ The first time you use a jobName,
 * Default files will be copied to "jobs/myJobName"
 
 You can then go into "jobs/myJobName/parms" and modify parameter values
+* Sample parameter file
+
+#### Sample
+* file _1_resolution
+```
+1024*1024
+1536*1024
+1024*1536
+1536*1536
+# Comments start with a "# and are ignored.
+# Empty lines are ignored
+# Hence this file has 4 parameters parameter
+# No parameters are read beyond a line with a period.
+# Nothing is read beyond the "." in the next line
+.
+512*512
+640*640
+768*768
+```
+
+
+
 #### Preamble
 * My first github project.
 * My first python project.

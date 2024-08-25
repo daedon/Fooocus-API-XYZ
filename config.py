@@ -1,13 +1,12 @@
 #08-25_0145
+saveNameCFG     = 2             # 0:No parms in file name, 1:ParmValue, 2:ParmName+ParmValue
+maxFileNameParm = 80            # Max len of a parm used in save_name
 saveCurlFiles   = False         # False saves disk space 
 saveDumpFiles   = False         # False saves disk space 
 saveLogs        = False         # False saves disk space 
-saveNameCFG     = 2             # 0:No parms in file name, 1:ParmValue, 2:ParmName+ParmValue
-maxFileNameParm = 80            # Max len of a parm used in save_name
 parmSeparator   = "_"           # save_name separator between parameter
 parmNVSeparator = "_"           # save_name separator between parameter name & value
 barCharacter    = '-'           # Output line between each curl call
-
 
 jobsDirectory   = f"./jobs/"                # Included with scripts, has sample jobs
 defaultParmsDir = f"./default_parameters"   # Included with scripts
@@ -17,6 +16,8 @@ parmsDirectory  = f"{currentJobDir}/parms"  # User editable fooocus parameters
 dumpDirectory   = f"{currentJobDir}/dumps"  # Parameters used to create image
 logsDirectory   = f"{currentJobDir}/logs"   # 
 curlDirectory   = f"{currentJobDir}/curls"
+
+# Only touch the lines above, not below
 
 # Initialize directories and parameters if New job
 if not os.path.exists( parmsDirectory):
