@@ -1,4 +1,4 @@
-A Fooocus image generator fromnt end for Fooocus-API
+A Fooocus image generator front end for Fooocus-API
 
 ###Quick start
 get it 
@@ -41,21 +41,18 @@ fapi
 * The contents of each parameter file is read line by line into the elements of the cooresponing array variable
 * Empty lines are ignored
 * Lines beginning with a "#" are ignored (comments)
-* A line beginning wth a "." ends the reading of values for the current parameter
-
+* A line beginning with a "." ends the reading of values for the current parameter
 * fapi generates all permutations of the parameter values in the order they were read.
-* For each permutation, fapi makes a curl to the fooocus-API 
+* For each permutation of all the values, fapi makes a curl call to fooocus-API.
 
 
+
+============= reminder notes ==========================
 example:
 * Example contents of "___refiner_switch"
 juggernautXL_v8Rundiffusion.safetensors
 realisticStockPhoto_v20.safetensors
-
-
-#Misc
 "XYZ" because this is simlar to 1111's "plotxyz"
 (Getting to that 1st push was painful)
-
 config.py
 Adding your own parameters
