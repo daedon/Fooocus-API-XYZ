@@ -1,4 +1,4 @@
-### Fooocus-API-XYZ Variable Parameter Fooocus Image generator
+### Fooocus-API-XYZ: Variable Parameter Fooocus Image generator
 #### Generates Fooocus Images with unrestricted parameter variations.
 
 Reads values from parameter files and generates images for every permutation.
@@ -53,7 +53,7 @@ realisticStockPhoto_v20.safetensors
 20
 ```
 
-Note that the numbers prefixing the file names determine the order the images will be generated. 
+Note that the characters in the 1st 3 positions of the file names determine the order the images will be generated. 
 
 The above parameter files will generate the following output. 
 ```
@@ -67,18 +67,18 @@ Fooocus "image_number" is set to 1 image per Curl call
 12 Curl calls will be made.
 12 images will be generated (2 * 2 * 3 * 1)
 Generate the 12 images now ? (y/n) y
-"myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844"
-"myJob_0002_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_19_024844"
-"myJob_0003_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_20_024844"
-"myJob_0004_base_model_juggernautXLv8Rundiffusion_resolution_1280x1280_steps_18_024844"
-"myJob_0005_base_model_juggernautXLv8Rundiffusion_resolution_1280x1280_steps_19_024844"
-"myJob_0006_base_model_juggernautXLv8Rundiffusion_resolution_1280x1280_steps_20_024844"
-"myJob_0007_base_model_realisticStockPhotov20_resolution_1024x1024_steps_18_024844"
-"myJob_0008_base_model_realisticStockPhotov20_resolution_1024x1024_steps_19_024844"
-"myJob_0009_base_model_realisticStockPhotov20_resolution_1024x1024_steps_20_024844"
-"myJob_0010_base_model_realisticStockPhotov20_resolution_1280x1280_steps_18_024844"
-"myJob_0011_base_model_realisticStockPhotov20_resolution_1280x1280_steps_19_024844"
-"myJob_0012_base_model_realisticStockPhotov20_resolution_1280x1280_steps_20_024844"
+"myJob_0001__base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_18_024844"
+"myJob_0002__base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_19_024844"
+"myJob_0003__base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_20_024844"
+"myJob_0004__base_model_juggernautXLv8Rundiffusion__resolution_1280x1280__steps_18_024844"
+"myJob_0005__base_model_juggernautXLv8Rundiffusion__resolution_1280x1280__steps_19_024844"
+"myJob_0006__base_model_juggernautXLv8Rundiffusion__resolution_1280x1280__steps_20_024844"
+"myJob_0007__base_model_realisticStockPhotov20__resolution_1024x1024__steps_18_024844"
+"myJob_0008__base_model_realisticStockPhotov20__resolution_1024x1024__steps_19_024844"
+"myJob_0009__base_model_realisticStockPhotov20__resolution_1024x1024__steps_20_024844"
+"myJob_0010__base_model_realisticStockPhotov20__resolution_1280x1280__steps_18_024844"
+"myJob_0011__base_model_realisticStockPhotov20__resolution_1280x1280__steps_19_024844"
+"myJob_0012__base_model_realisticStockPhotov20__resolution_1280x1280__steps_20_024844"
 ```
 The save_name (image file name) can be configured with saveNameCFG in config.py:
 ```
@@ -89,8 +89,13 @@ saveNameCFG = 1: Image name contains only the parameter value.
   myJob_0001_juggernautXLv8Rundiffusion_1024x1024_18_024844
 
 saveNameCFG = 2: Image name contains both parameter name and value.
-  myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844
+  myJob_0001_base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_18_024844
 ```
+Separators can be modified in `config.py`, for example, the above file names could have been:
+```
+"myJob_0012----base_model=realisticStockPhotov20----resolution=1280x1280----steps_20_024844"
+```
+
 
 #### Miscellaneous
 * This project started out as 6 lines of bash.
