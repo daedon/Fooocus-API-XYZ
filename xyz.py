@@ -148,14 +148,11 @@ def generateImages( jobName):
         with open( 'runCURL', 'w') as f:                        # Save template
              f.write( template)
         os.chmod( 'runCURL', 0o755)                             # Make template executable
-        '''
         print(f"{barCharacter * 100}")
         print(f"Curl {currentCurlCall} of {totalCurlCalls} ({image_number} image{S(image_number)} will be generated)")
-        '''
         print(f"save_name: \"{fName}\"\n")
         ############################################################################################################
 
-        '''
         status= os.system( f"./runCURL >{logsDirectory}/{fName}.curl.log >>{logsDirectory}/{fName}.curl.log")
         if saveCurlFiles:
            shutil.copy( 'runCURL', os.path.join( curlDirectory, fName))
@@ -171,7 +168,6 @@ def generateImages( jobName):
         if imagesRemaining > 0:
            timeRemaining= timeInDHMS( int(imagesRemaining * secondsPerImage))
            print( f"{imagesRemaining} image{S(imagesRemaining)} remaining, ESTIMATED time remaining: {timeRemaining}")
-        '''
 
     return currentCurlCall
 

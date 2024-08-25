@@ -1,7 +1,10 @@
 ### A Fooocus image generator front end for Fooocus-API
 Reads Fooocus parameters and generates images for all permutations
 
-Similar to Stable Diffusion Automatic-1111 script XYZ
+Similar to Stable Diffusion Automatic-1111 script XYZ.
+
+Requires Fooocus-API installed and running.
+
 
 #### Quick start
 Get it 
@@ -95,8 +98,7 @@ saveNameCFG 2: Image name contains parameter name and value.
 git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git
 ```
 
-#### Details
-* Generates images using Fooocus-API.
+#### Summary
 * Requires Fooocus-API to be running.
 * Reads parameter files in a job's "parms" subdirectory.
 * Each file represents a Fooocus parameter: eg, ___steps, ___resolution, ___prompt, ___base_model.
