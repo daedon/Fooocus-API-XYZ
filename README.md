@@ -4,41 +4,42 @@ Reads Fooocus-API parameters and generates images for all permutations
 Similar to Stable Diffusion Plot-XYZ
 
 #### Quick start
-get it 
+Get it 
 ```
 git clone https://github.com/daedon/Fooocus-API-XYZ
 ```
-run it
+Run it
 ```
 cd Fooocus-API-XYZ
 python3 xyz.py <jobName>
 ```
-The first time you use a jobName, 
+The first time you use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs"
 * Associated sub-directories will be created
 * Default files will be copied to "jobs/myJobName"
 
 You can then go into "jobs/myJobName/parms" and modify parameter values
-* Sample parameter file
 
-#### 3 Sample parameter files
 
-* file "../parms/_1_base_model"
+#### 3 Parameter files included in sample myJob
+
+Parm file: "../parms/_1_base_model"
 ```
 juggernautXL_v8Rundiffusion.safetensors
 realisticStockPhoto_v20.safetensors
 ```
-* file "../parms/_2_resolution"
+Parm file: "../parms/_2_resolution"
 ```
 1024*1536
 1536*1024
 ```
-* file "../parms/_3_steps"
+Parm file: "../parms/_3_steps"
 ```
 18
 19
 20
 ```
+The above parameter files will result in 12 curl calls and 12 images ('image_number' is set to one in the example)
 
 ```
 Job "myJob" has 13 parameters:
