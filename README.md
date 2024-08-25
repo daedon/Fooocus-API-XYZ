@@ -31,7 +31,7 @@ You can then go into "jobs/myJob/parms" and modify the parameters.
 #### A simple example with 3 Parameter files (included in sample myJob)
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
 
-"../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model"
+`../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model`
 ```
 juggernautXL_v8Rundiffusion.safetensors
 realisticStockPhoto_v20.safetensors
