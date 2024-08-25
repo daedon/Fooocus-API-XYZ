@@ -14,7 +14,10 @@ git clone https://github.com/daedon/Fooocus-API-XYZ
 Run it
 ```
 cd Fooocus-API-XYZ
-python3 xyz.py <jobName>
+python3 xyz.py myJob
+ or 
+python3 xyz.py newJobName
+
 ```
 The first time you use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs"
