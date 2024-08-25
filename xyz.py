@@ -124,7 +124,7 @@ def generateImages( jobName):
                '''
                translation_table = str.maketrans( "* ,", "x__")             # Replace characters
                parmValue = parmValue.translate(translation_table)    # 
-               translation_table = str.maketrans( "", "", "\\_'():")          # Delete characters
+               translation_table = str.maketrans( "", "", "\\_'():")        # Delete characters
                pV = parmValue.translate(translation_table)
                '''
 
