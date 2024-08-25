@@ -1,9 +1,9 @@
 ### A Fooocus image generator front end for Fooocus-API
 Reads Fooocus parameters and generates images for all permutations
 
-Similar to Stable Diffusion Automatic-1111 script XYZ.
-
 Requires Fooocus-API installed and running.
+
+Similar to Stable Diffusion Automatic1111 XYZ script (more details below).
 
 
 #### Quick start
@@ -24,6 +24,7 @@ The first time you use a jobName:
 * Associated sub-directories will be created.
 * Default files will be copied to "jobs/newJobName".
 * Modify parameters in "jobs/myJob/parms".
+* Change parameters for all your future jobs in `defaults` directories.
 
 #### A simple example with 3 Parameter files (included in sample myJob)
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
