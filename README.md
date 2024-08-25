@@ -72,11 +72,11 @@ Generate the 12 images now ? (y/n) y
 ```
 What is included in the image name can be configured with saveNameCFG in config.py
 * saveNameCFG 0: Image name contains no parmeters in the file name, only image # and time stamp
- ```myJob_0001_024844```
+```myJob_0001_024844```
 * saveNameCFG 1: Image name contains parameter Value only
- ```myJob_0001_juggernautXLv8Rundiffusion_1024x1024_18_024844```
+```myJob_0001_juggernautXLv8Rundiffusion_1024x1024_18_024844```
 * saveNameCFG 2: Image name contains parameter name and Value (as in example above)
- ```myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844```
+```myJob_0001_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_steps_18_024844```
 
 #### Preamble
 * First ancestor of xyz started out as 6 lines of bash. Grew grew grew.
