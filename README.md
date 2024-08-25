@@ -8,12 +8,12 @@ Similar to Stable Diffusion Plot-XYZ
 get it 
 
 ```
-git clone https://github.com/daedon/fapi
+git clone https://github.com/daedon/Fooocus-API-XYZ
 ```
 
 run it
 ```
-cd xyz
+cd Fooocus-API-XYZ
 python3 xyz.py <jobName>
 ```
 
