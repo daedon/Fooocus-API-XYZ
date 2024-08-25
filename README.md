@@ -1,14 +1,18 @@
 ### Fooocus-API-XYZ Variable Parameter Fooocus Image generator
 #### Generates Fooocus Images with unrestricted parameter variations.
 
-Reads values from parameter files and generates images for each permutation (see simple example after Quick Start).
-
-Requires Fooocus-API installed and running.
+Reads values from parameter files and generates images for each permutation 
 
 Similar to Stable Diffusion Automatic1111 XYZ script. (more details below).
 
+(see simple example after Quick Start).
+
+
 
 #### Quick Start
+
+Requires Fooocus-API installed and running.
+
 Get it 
 ```
 git clone https://github.com/daedon/Fooocus-API-XYZ
