@@ -28,7 +28,7 @@ python3 xyz.py myJob
 
 You can then go into "jobs/myJob/parms" and modify the parameters.
 
-#### 3 Parameter files included in sample myJob
+#### A simple example with 3 Parameter files (included in sample myJob)
 The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
 
 "../Fooocus-API-XYZ/jobs/myJob/parms/_1_base_model"
@@ -101,9 +101,10 @@ git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.g
 #### Summary
 * Requires Fooocus-API to be running.
 * Reads parameter files in a job's "parms" subdirectory.
-* Each file represents a Fooocus parameter: eg, ___steps, ___resolution, ___prompt, ___base_model.
 * Files are stored in "jobs/myJobName".
-* The 1st character of each file must be an "_".
+* Each file represents a Fooocus parameter: eg, ___steps, ___resolution, ___prompt, ___base_model.
+* Each line in file represents a parameter value (see examples above)
+* The 1st character of each file must be an underscore "_".
 * The 1st 3 characters of each file are used for documentation and/or sorting purposes.
 * The 1st 3 characters of each file are discarded.
 * The files are read in alphabetical order, hence the first 3 characters decide the order of the permutations.
@@ -114,12 +115,30 @@ git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.g
 * No parameter values are read after a line with a "."
 * Fooocus-API-XYZ generates all permutations of the parameter values in the order they were read.
 * For each permutation of all the values, Fooocus-API-XYZ makes a curl call to fooocus-API.
-* For each permutation, substitutes all "___parameters" in "curl.template" into "runCURL" and executes "runCURL".
+* For each permutation, substitutes all "___parameters" in "curl.template", writes to and executes "runCURL".
 
 #### Configuring / customizing
-* config.py
+
+See config.py
+
+The curl template has close to 100 parameters, onyla dozen or so which are included by default.
+
+For example, "sampler_name" is hard coded in the curl job template. 
+
+```
+"sampler_name": "dpmpp_2m_sde_gpu",
+```
+
+To make sampler_name a variable, 
+* Edit curl.templae and replace "dpmpp_2m_sde_gpu" with "___sampler_name"
+* In your parms directory, create a file named "___sampler_name" containing your sample names.
+* Generate images.
+* To have sampler_name in all your jobs, do the above to in the defaults directories.
+**  Create
 
 
-============= reminder notes ==========================
-config.py
-Adding your own parameters
+" "Adding your own parameters
+** The culrl 
+
+
+
