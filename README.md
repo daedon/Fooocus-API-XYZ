@@ -44,7 +44,8 @@ realisticStockPhoto_v20.safetensors
 19
 20
 ```
-Note that the numbers in the names will determine the order the permutations (and images) are generated
+Note that the numbers in the names will determine the order the permutations (and images) are generated. 
+
 The above parameter files will generate the following output and image names.
 ```
 Job "myJob" has 13 parameters:
@@ -72,9 +73,9 @@ Generate the 12 images now ? (y/n) y
 ```
 What is included in the image name can be configured with saveNameCFG in config.py
 
-saveNameCFG 0: Image name contains no parmeters in the file name, only image # and time stamp
+saveNameCFG 0: Image file name contains no parmeters, only jobName, image # and time stamp
 
-  myJob_0001_024844
+> myJob_0001_024844
 
 saveNameCFG 1: Image name contains parameter Value only
 
