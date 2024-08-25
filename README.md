@@ -16,35 +16,36 @@ python3 xyz.py <jobName>
 The first time you use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs"
 * Associated sub-directories will be created
-* Default files will be copied to "jobs/myJobName"
+* Default files will be copied to "jobs/newJobName"
 * A sample job named myJob is included, to run it:
 ```
 cd Fooocus-API-XYZ
 python3 xyz.py myJob
 ```
 
-You can then go into "jobs/myJobName/parms" and modify parameter values.
+You can then go into "jobs/myJob/parms" and modify the parameters.
 
 #### 3 Parameter files included in sample myJob
-The following parameters will generate 12 curl calls and 12 images ('image_number' = 1)
+The following parameters will generate 12 curl calls and 12 images ('image_number' = 1).
 
-Parm file: "../parms/_1_base_model"
+File: "../parms/_1_base_model"
 ```
 juggernautXL_v8Rundiffusion.safetensors
 realisticStockPhoto_v20.safetensors
 ```
-Parm file: "../parms/_2_resolution"
+File: "../parms/_2_resolution"
 ```
 1024*1536
 1536*1024
 ```
-Parm file: "../parms/_3_steps"
+File: "../parms/_3_steps"
 ```
 18
 19
 20
 ```
-The above parameter files will generate the following output and image names
+The above parameter files will generate the following output and image names.
+Note that the numbers in the names will determine the order the permutations are created.
 
 ```
 Job "myJob" has 13 parameters:
