@@ -37,8 +37,8 @@ Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directo
 `FILE: _1_base_model`
 ```
 # 2 Base Models
-juggernautXL_v8Rundiffusion.safetensors
-realisticStockPhoto_v20.safetensors
+juggernautXL_v8
+realisticPhoto_v20
 ```
 `FILE: _2_resolution`
 ```
@@ -68,18 +68,18 @@ Fooocus "image_number" is set to 1 image per Curl call
 12 Curl calls will be made.
 12 images will be generated (2 * 3 * 2 * 1)
 Generate the 12 images now ? (y/n) y
-"myJob_0001_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_512x512_guidance_scale_2.0_082317"
-"myJob_0002_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_512x512_guidance_scale_3.0_082317"
-"myJob_0003_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_640x640_guidance_scale_2.0_082317"
-"myJob_0004_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_640x640_guidance_scale_3.0_082317"
-"myJob_0005_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_guidance_scale_2.0_082317"
-"myJob_0006_steps_25_base_model_juggernautXLv8Rundiffusion_resolution_1024x1024_guidance_scale_3.0_082317"
-"myJob_0007_steps_25_base_model_realisticStockPhotov20_resolution_512x512_guidance_scale_2.0_082317"
-"myJob_0008_steps_25_base_model_realisticStockPhotov20_resolution_512x512_guidance_scale_3.0_082317"
-"myJob_0009_steps_25_base_model_realisticStockPhotov20_resolution_640x640_guidance_scale_2.0_082317"
-"myJob_0010_steps_25_base_model_realisticStockPhotov20_resolution_640x640_guidance_scale_3.0_082317"
-"myJob_0011_steps_25_base_model_realisticStockPhotov20_resolution_1024x1024_guidance_scale_2.0_082317"
-"myJob_0012_steps_25_base_model_realisticStockPhotov20_resolution_1024x1024_guidance_scale_3.0_082317"
+"myJob_0001_steps_25_base_model_juggernautXLv8_resolution_512x512_guidance_scale_2.0_082317"
+"myJob_0002_steps_25_base_model_juggernautXLv8_resolution_512x512_guidance_scale_3.0_082317"
+"myJob_0003_steps_25_base_model_juggernautXLv8_resolution_640x640_guidance_scale_2.0_082317"
+"myJob_0004_steps_25_base_model_juggernautXLv8_resolution_640x640_guidance_scale_3.0_082317"
+"myJob_0005_steps_25_base_model_juggernautXLv8_resolution_1024x1024_guidance_scale_2.0_082317"
+"myJob_0006_steps_25_base_model_juggernautXLv8_resolution_1024x1024_guidance_scale_3.0_082317"
+"myJob_0007_steps_25_base_model_realisticPhotov20_resolution_512x512_guidance_scale_2.0_082317"
+"myJob_0008_steps_25_base_model_realisticPhotov20_resolution_512x512_guidance_scale_3.0_082317"
+"myJob_0009_steps_25_base_model_realisticPhotov20_resolution_640x640_guidance_scale_2.0_082317"
+"myJob_0010_steps_25_base_model_realisticPhotov20_resolution_640x640_guidance_scale_3.0_082317"
+"myJob_0011_steps_25_base_model_realisticPhotov20_resolution_1024x1024_guidance_scale_2.0_082317"
+"myJob_0012_steps_25_base_model_realisticPhotov20_resolution_1024x1024_guidance_scale_3.0_082317"
 ```
 The save_name (image file name) can be configured with saveNameCFG in config.py:
 ```
@@ -87,10 +87,10 @@ saveNameCFG = 0: Image file name contains no parameters, only jobName, image # a
   myJob_0001_024844
 
 saveNameCFG = 1: Image name contains only the parameter value.
-  myJob_0001_juggernautXLv8Rundiffusion_1024x1024_18_024844
+  myJob_0001_juggernautXLv8_1024x1024_18_024844
 
 saveNameCFG = 2: Image name contains both parameter name and value.
-  myJob_0001_base_model_juggernautXLv8Rundiffusion__resolution_1024x1024__steps_18_024844
+  myJob_0001_base_model_juggernautXLv8__resolution_1024x1024__steps_18_024844
 ```
 
 If `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in the file name.
@@ -99,7 +99,7 @@ To force the inclusion of a parameter with only one value, terminate the paramet
 
 Separators can be modified in `config.py`, for example, the above file names could have been:
 ```
-"myJob_0012----base_model=realisticStockPhotov20----resolution=1280x1280----steps_20_024844"
+"myJob_0012----base_model=realisticPhotov20----resolution=1280x1280----steps_20_024844"
 ```
 #### Summary
 * Requires `Fooocus-API` to be running.
