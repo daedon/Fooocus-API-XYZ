@@ -18,11 +18,11 @@ python3 xyz.py <jobName>
 ```
 
 The first time you use a jobName, 
-* A directory with the job's name will be created in"jobs"
+* A directory with the job's name will be created in "Fooocus-API-XYZ/jobs"
 * Associated sub-directories will be created
-* Default files will be copied to job
+* Default files will be copied to "jobs/\<jobName\>"
 
-You can then go into "jobs/<jobName>/parms" and modify the parameter values
+You can then go into "jobs/\<jobName\>/parms" and modify the parameter values
 #### Preamble
 My first github project.
 My first python project.
