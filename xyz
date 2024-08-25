@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/_python_/Fooocus-API-XYZ
+p3 ./xyz.py $*
+
