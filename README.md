@@ -69,6 +69,8 @@ Generate the 12 images now ? (y/n) y
 "myJob_0012_steps_25_base_model_realisticPhotov20_resolution_1024x1024_guidance_scale_3.0_082317"
 ```
 The save_name (image file name) can be configured with saveNameCFG in config.py:
+When `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in save_name.
+To force the inclusion of a parameter with only one value, terminate the parameter file name with an "_", eg `___seed_`.
 ```
 saveNameCFG = 0: Image file name contains no parameters, only jobName, image # and time stamp. 
 saveNameCFG = 1: Image name contains only the parameter value.
@@ -78,12 +80,7 @@ saveNameCFG = 2: Image name contains both parameter name and value.
 1: myJob_0001_juggernautXLv8_1024x1024_18_024844
 2: myJob_0001_base_model_juggernautXLv8__resolution_1024x1024__steps_18_024844
 ```
-
-If `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in the file name.
-
-To force the inclusion of a parameter with only one value, terminate the parameter's file name with an "_", eg `___seed_`.
-
-Separators can be modified in `config.py`, for example, the above file names could have been:
+Parameter separators in save_name can be modified in `config.py`, for example, the above file names could have been:
 ```
 "myJob_0012----base_model=realisticPhotov20----resolution=1280x1280----steps_20_024844"
 ```
@@ -119,13 +116,13 @@ To reduce repetiion in large permuations and create N images with random seeds, 
 
 The curl template has close to 100 parameters, only a dozen or so are set up by default.
 
-For example, "sampler_name" is hard coded in the curl job template. 
+For example, `sampler_name` is hard coded in the curl job template. 
 
 ```
 "sampler_name": "dpmpp_2m_sde_gpu",
 ```
 
-To make sampler_name one of your variable parameters:
+To make `sampler_name` one of your variable parameters:
 * Edit curl.template and replace `dpmpp_2m_sde_gpu` with `___sampler_name` (keep the quotes).
 ```
 "sampler_name": "___sampler_name",
