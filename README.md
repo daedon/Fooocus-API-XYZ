@@ -71,9 +71,9 @@ saveNameCFG = 2: save_name contains both the parameter name and parameter value.
 1: myJob_0001_juggernautXLv8_1024x1024_18_024844
 2: myJob_0001_base_model_juggernautXLv8__resolution_1024x1024__steps_18_024844
 ```
-Parameter separators in save_name can be modified in `config.py`, for example, the above file names could have been:
+Parameter separators in save_name can be modified in `config.py`. The above save_names could have been:
 ```
-"myJob_0012----base_model=realisticPhotov20----resolution=1280x1280----steps_20_024844"
+myJob_0001_steps=25----resolution=512x512----guidance_scale=4.0----sharpness=2.0_033035
 ```
 #### Summary
 * Requires `Fooocus-API` to be running.
