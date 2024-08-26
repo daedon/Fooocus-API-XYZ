@@ -1,21 +1,22 @@
 ### Fooocus-API-XYZ: Variable Parameter Image Generator for Fooocus-API
 Generates a series of Fooocus images with unrestricted parameter variations. 
+Requires Fooocus-API installed and running.
+
 
 #### Quick Start
 
-Requires Fooocus-API installed and running.
 
-Get Fooocus-API-XYZ
+Get it:
 ```
 git clone https://github.com/daedon/Fooocus-API-XYZ
 ```
-Run the sample job
+Run it:
 ```
 cd Fooocus-API-XYZ
 python3 xyz.py myJob
 
 ```
-Create a new job
+Create a new job:
 ```
 cd Fooocus-API-XYZ
 python3 xyz.py jobName
