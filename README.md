@@ -9,12 +9,16 @@ Get Fooocus-API-XYZ
 ```
 git clone https://github.com/daedon/Fooocus-API-XYZ
 ```
-Run it
+Run the sample job
 ```
 cd Fooocus-API-XYZ
-python3 xyz.py myJob    # Sample job included
- or 
-python3 xyz.py newJobName
+python3 xyz.py myJob
+
+```
+Create a new job
+```
+cd Fooocus-API-XYZ
+python3 xyz.py jobName
 
 ```
 The first time you use a jobName:
@@ -26,11 +30,10 @@ The first time you use a jobName:
 
 #### A simple example with 3 parameter files that have more than 1 value is included in sample the sample myJob.
 
-xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
-
-Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contain only 5 samples.
+Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contain 5 samples from the included demo job.
 The characters in the first 3 positions of the file name serve to sort and determine the order the parameters will be processed.
-In the above example, only the base_model, resolution and guidance_scale will be used to biuld the image
+In the example below, only the base_model, resolution and guidance_scale will be used to build the image file name.
+xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 
 | FILE NAME       | _0_steps         | _1_base_model    | _2_resolution   |_3_guidance_scale|  ___image_number |
 | ----------------| ---------------- | ---------------- |---------------- |----------------|---------------- |
@@ -38,7 +41,7 @@ In the above example, only the base_model, resolution and guidance_scale will be
 | line 2 in file  |                  | realisticPhoto   | 640*640         | 3.0             |                  |                 
 | line 3 in file  |                  |                  | 1024*1024       |                 |                  |                 
 
-The parameters in the table above generate the following output:
+The parameters in the table above should produce the following output:
 ```
 Job "myJob" has 13 parameters:
   ['steps', 'base_model', 'resolution', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
