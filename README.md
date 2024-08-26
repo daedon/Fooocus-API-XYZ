@@ -159,8 +159,20 @@ graph TD;
     B_Line-2-->Generate_Permutation;
     C_Line-1-->Generate_Permutation;
     C_Line-2-->Generate_Permutation;
+
+    Generate_Permutation-->A1_B1_C1
+    Generate_Permutation-->A1_B1_C2
+    Generate_Permutation-->A1_B2_C1
+    Generate_Permutation-->A1_B2_C2
+    Generate_Permutation-->A2_B1_C1
+    Generate_Permutation-->A2_B1_C2
+    Generate_Permutation-->A2_B2_C1
+    Generate_Permutation-->A2_B2_C2
+
     Generate_Permutation-->Curl_Call;
     CurlCall-->Image_Created;
+
+
 ```
 
 
