@@ -153,12 +153,16 @@ graph TD;
     List_C-->Value-C1;
     List_C-->Value-C2;
 
-    Value-A1-->GeneratePermutation;
-    Value-A2-->GeneratePermutation;
-    Value-B1-->GeneratePermutation;
-    Value-B2-->GeneratePermutation;
-    Value-C1-->GeneratePermutation;
-    Value-C3-->GeneratePermutation;
-    GeneratePermutation-->CurlCall;
+    Value-A1-->Generate_Permutation;
+    Value-A2-->Generate_Permutation;
+    Value-B1-->Generate_Permutation;
+    Value-B2-->Generate_Permutation;
+    Value-C1-->Generate_Permutation;
+    Value-C2-->Generate_Permutation;
+    Generate_Permutation-->CurlCall;
     CurlCall-->ImageCreated;
 ```
+
+
+
+
