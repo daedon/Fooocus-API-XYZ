@@ -148,15 +148,17 @@ graph TD;
     Read_Parameters-->Parameter-3;
     Parameter-1-->Value-1a;
     Parameter-1-->Value-1b;
-    Parameter-1-->Value-1c;
     Parameter-2-->Value-2a;
+    Parameter-2-->Value-2b;
     Parameter-3-->Value-3a;
+    Parameter-3-->Value-3b;
 
     Value-1a-->GeneratePermutation;
     Value-1b-->GeneratePermutation;
-    Value-1c-->GeneratePermutation;
     Value-2a-->GeneratePermutation;
+    Value-2b-->GeneratePermutation;
     Value-3a-->GeneratePermutation;
+    Value-3b-->GeneratePermutation;
     GeneratePermutation-->CurlCall;
     CurlCall-->ImageCreated;
 ```
