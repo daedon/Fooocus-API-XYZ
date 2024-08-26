@@ -167,14 +167,11 @@ Colons can be used to align columns.
 | col 2 is      | centered      |   $12 |
 
 
-|FILE NAME       | _1_base_model    | _2_resolution    |_3_guidance_scale|                 |
-| ----------------| ---------------- | ---------------- |---------------- |---------------- |
-| 1st line in file | juggernautXL_v8  | 512*640          | 2.0             |                 |
-| 2nd line in file | realisticPhoto   | 640*640          | 3.0             |                 |
-| 3rd line in file |                  | 1024*1024        |                 |                 |
-
-
-
+|FILE NAME ==>   | _1_base_model    | _2_resolution    |_3_guidance_scale| ___step_         | ___image_number |
+| ----------------| ---------------- | ---------------- |---------------- |---------------- |---------------- |
+| line 1 in file | juggernautXL_v8  | 512*640          | 2.0             | 22               |  1              |
+| line 2 in file | realisticPhoto   | 640*640          | 3.0             |                  |                 |
+| line 3 in file |                  | 1024*1024        |                 |                  |                 |
 
 
 
