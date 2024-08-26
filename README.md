@@ -71,10 +71,11 @@ Generate the 12 images now ? (y/n) y
 The save_name (image file name) can be configured with saveNameCFG in config.py:
 ```
 saveNameCFG = 0: Image file name contains no parameters, only jobName, image # and time stamp. 
-  myJob_0001_024844
 saveNameCFG = 1: Image name contains only the parameter value.
-  myJob_0001_juggernautXLv8_1024x1024_18_024844
 saveNameCFG = 2: Image name contains both parameter name and value.
+
+  myJob_0001_024844
+  myJob_0001_juggernautXLv8_1024x1024_18_024844
   myJob_0001_base_model_juggernautXLv8__resolution_1024x1024__steps_18_024844
 ```
 
