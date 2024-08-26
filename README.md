@@ -146,21 +146,21 @@ graph TD;
     Read_Parameters_ABC-->List_A;
     Read_Parameters_ABC-->List_B;
     Read_Parameters_ABC-->List_C;
-    List_A-->Value-A1;
-    List_A-->Value-A2;
-    List_B-->Value-B1;
-    List_B-->Value-B2;
-    List_C-->Value-C1;
-    List_C-->Value-C2;
+    List_A-->Line-A1;
+    List_A-->Line-A2;
+    List_B-->Line-B1;
+    List_B-->Line-B2;
+    List_C-->Line-C1;
+    List_C-->Line-C2;
 
-    Value-A1-->Generate_Permutation;
-    Value-A2-->Generate_Permutation;
-    Value-B1-->Generate_Permutation;
-    Value-B2-->Generate_Permutation;
-    Value-C1-->Generate_Permutation;
-    Value-C2-->Generate_Permutation;
-    Generate_Permutation-->CurlCall;
-    CurlCall-->ImageCreated;
+    Line-A1-->Generate_Permutation;
+    Line-A2-->Generate_Permutation;
+    Line-B1-->Generate_Permutation;
+    Line-B2-->Generate_Permutation;
+    Line-C1-->Generate_Permutation;
+    Line-C2-->Generate_Permutation;
+    Generate_Permutation-->Curl_Call;
+    CurlCall-->Image_Created;
 ```
 
 
