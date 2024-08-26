@@ -146,6 +146,7 @@ graph TD;
     Read_Parameters[Read Parameters Files]-->listA[List A];
     Read_Parameters-->listB[List B];
     Read_Parameters-->listC[List C];
+
     listA-->A1[Parameter 1];
     listA-->A2[Parameter 2];
     listB-->B1[Parameter 1];
@@ -169,14 +170,16 @@ graph TD;
     Generate_Permutation-->A2_B2_C1[A2 B2 C1];
     Generate_Permutation-->A2_B2_C2[A2 B2 C2];
 
-    A1_B1_C1-->CurlCall[runCURL];
-    A1_B1_C2-->CurlCall;
-    A1_B2_C1-->CurlCall;
-    A1_B2_C2-->CurlCall;
-    A2_B1_C1-->CurlCall;
-    A2_B1_C2-->CurlCall;
-    A2_B2_C1-->CurlCall;
-    A2_B2_C2-->CurlCall;
+    A1_B1_C1-->template[Fill Curl Template];
+    A1_B1_C2-->template;
+    A1_B2_C1-->template;
+    A1_B2_C2-->template;
+    A2_B1_C1-->template;
+    A2_B1_C2-->template;
+    A2_B2_C1-->template;
+    A2_B2_C2-->template;
+
+    template-->CurlCall[execute runCURL];
 
     CurlCall-->ImageA1_B1_C1[Image 1];
     CurlCall-->ImageA1_B1_C2[Image 2];
