@@ -127,19 +127,6 @@ To make `sampler_name` one of your variable parameters:
 * Generate your images.
 * To have sampler_name in all your jobs, make the above changes to the defaults directories.
 
-#### What's next ?
-
-A Gradio interface for this project.
-
-#### Miscellaneous
-* This project started out as 6 lines of bash.
-* Linux only at this time.
-* Still learning ~~markup~~ markdown.
-* My first github project.
-* My first python project.
-* Getting to that 1st push was painful, wish I knew about this sooner:
-
-`git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
 
 ```mermaid
 graph TD;
