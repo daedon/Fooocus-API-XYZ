@@ -160,15 +160,21 @@ A Gradio interface for this project.
 
 Colons can be used to align columns.
 
+
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 
-| File |
-| _1_base_model    | _2_resolution    |_3_guidance_scale|                 |
+
+|`FILE NAME`       | _1_base_model    | _2_resolution    |_3_guidance_scale|                 |
 | ---------------- | ---------------- |---------------- |---------------- |
-| juggernautXL_v8  | 512*640          | 2.0             |                 |
-| realisticPhoto   | 640*640          | 3.0             |                 |
-|                  | 1024*1024        |                 |                 |
+| 1st line in file | juggernautXL_v8  | 512*640          | 2.0             |                 |
+| 2nd line in file | realisticPhoto   | 640*640          | 3.0             |                 |
+| 3rd line in file |                  | 1024*1024        |                 |                 |
+
+
+
+
+
 
