@@ -45,7 +45,7 @@ All permutations of the following parameters will be used to make curl calls to 
 | line 2 in file  |                  |   640*640        | 4.5             |  3.0           |                 |
 | line 3 in file  |                  | 1024*1024        |                 |                |                 |
 
-The parameters in the table above will produce the following files:
+The parameters in the table above will produce the following image files:
 ```
 myJob_0001_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_2.0_033035
 myJob_0002_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_3.0_033035
