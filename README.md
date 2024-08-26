@@ -158,6 +158,13 @@ A Gradio interface for this project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
 `git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
 
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+
 
 | ---------------- | ---------------- |---------------- |---------------- |
 | File                                                                    |
