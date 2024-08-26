@@ -158,7 +158,14 @@ A Gradio interface for this project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
 `git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+
+| ---------------- | ---------------- |---------------- |---------------- |
+| File                                                                    |
+| ---------------- | ---------------- |---------------- |---------------- |
+| _1_base_model    | _2_resolution    |_3_guidance_scale|                 |
+| ---------------- | ---------------- |---------------- |---------------- |
+| juggernautXL_v8  | 512*640          | 2.0             |                 |
+| realisticPhoto   | 640*640          | 3.0             |                 |
+|                  | 1024*1024        |                 |                 |
+| ---------------- | ---------------- |---------------- |---------------- |
+
