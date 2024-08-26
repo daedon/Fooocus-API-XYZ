@@ -143,22 +143,22 @@ A Gradio interface for this project.
 
 ```mermaid
 graph TD;
-    Read_Parameters-->List_A;
-    Read_Parameters-->List_B;
-    Read_Parameters-->List_C;
-    List_A-->A(1);
-    List_A-->A_Line-2;
-    List_B-->B_Line-1;
-    List_B-->B_Line-2;
-    List_C-->C_Line-1;
-    List_C-->C_Line-2;
+    Read_Parameters[Read Parameters A B C]-->listA[List A];
+    Read_Parameters-->listB[List B];
+    Read_Parameters-->listC[List C];
+    listA-->A1[Parameter 1];
+    listA-->A2[Parameter 2];
+    listB-->B1[Parameter 1];
+    listB-->B2[Parameter 2];
+    listC-->C1[Parameter 1];
+    listC-->C2[Parameter-2];
 
-    A_Line-1-->Generate_Permutation;
-    A_Line-2-->Generate_Permutation;
-    B_Line-1-->Generate_Permutation;
-    B_Line-2-->Generate_Permutation;
-    C_Line-1-->Generate_Permutation;
-    C_Line-2-->Generate_Permutation;
+    A1-->Generate_Permutation[Generate Permutations];
+    A2-->Generate_Permutation;
+    B1-->Generate_Permutation;
+    B2-->Generate_Permutation;
+    C1-->Generate_Permutation;
+    C2-->Generate_Permutation;
 
     Generate_Permutation-->A1_B1_C1;
     Generate_Permutation-->A1_B1_C2;
@@ -169,7 +169,7 @@ graph TD;
     Generate_Permutation-->A2_B2_C1;
     Generate_Permutation-->A2_B2_C2;
 
-    A1_B1_C1-->CurlCall;
+    A1_B1_C1-->CurlCall[runCURL];
     A1_B1_C2-->CurlCall;
     A1_B2_C1-->CurlCall;
     A1_B2_C2-->CurlCall;
@@ -178,6 +178,14 @@ graph TD;
     A2_B2_C1-->CurlCall;
     A2_B2_C2-->CurlCall;
 
+    CurlCall-->ImageA1_B1_C1[Image 1];
+    CurlCall-->ImageA1_B1_C2[Image 2];
+    CurlCall-->ImageA1_B2_C1[Image 3];
+    CurlCall-->ImageA1_B2_C2[Image 4];
+    CurlCall-->ImageA2_B1_C1[Image 5];
+    CurlCall-->ImageA2_B1_C2[Image 6];
+    CurlCall-->ImageA2_B2_C1[Image 7];
+    CurlCall-->ImageA2_B2_C2[Image 8];
 
 ```
 
