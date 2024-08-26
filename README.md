@@ -1,6 +1,7 @@
 ### Fooocus-API-XYZ: Variable Parameter Image Generator for Fooocus-API
 Generates a series of Fooocus images with unrestricted parameter variations. 
-Requires Fooocus-API installed and running.
+
+`Requires Fooocus-API installed and running.`
 
 
 #### Quick Start
