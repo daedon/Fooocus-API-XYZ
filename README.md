@@ -160,14 +160,14 @@ graph TD;
     C1-->Generate_Permutation;
     C2-->Generate_Permutation;
 
-    Generate_Permutation-->A1_B1_C1[A1_B1_C1];
-    Generate_Permutation-->A1_B1_C2[A1_B1_C2];
-    Generate_Permutation-->A1_B2_C1[A1_B2_C1];
-    Generate_Permutation-->A1_B2_C2[A1_B2_C2];
-    Generate_Permutation-->A2_B1_C1[A2_B1_C1];
-    Generate_Permutation-->A2_B1_C2[A2_B1_C2];
-    Generate_Permutation-->A2_B2_C1[A2_B2_C1];
-    Generate_Permutation-->A2_B2_C2[A2_B2_C2];
+    Generate_Permutation-->A1_B1_C1[A1 B1 C1];
+    Generate_Permutation-->A1_B1_C2[A1 B1 C2];
+    Generate_Permutation-->A1_B2_C1[A1 B2 C1];
+    Generate_Permutation-->A1_B2_C2[A1 B2 C2];
+    Generate_Permutation-->A2_B1_C1[A2 B1 C1];
+    Generate_Permutation-->A2_B1_C2[A2 B1 C2];
+    Generate_Permutation-->A2_B2_C1[A2 B2 C1];
+    Generate_Permutation-->A2_B2_C2[A2 B2 C2];
 
     A1_B1_C1-->CurlCall[runCURL];
     A1_B1_C2-->CurlCall;
