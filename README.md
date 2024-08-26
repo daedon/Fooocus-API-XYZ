@@ -153,7 +153,7 @@ graph TD;
     listC-->C1[Parameter 1];
     listC-->C2[Parameter-2];
 
-    A1-->Generate_Permutation[Generate Permutations];
+    A1-->Generate_Permutation[Generate Permutations for all parameter values];
     A2-->Generate_Permutation;
     B1-->Generate_Permutation;
     B2-->Generate_Permutation;
