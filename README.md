@@ -143,8 +143,12 @@ A Gradio interface for this project.
 
 ```mermaid
 graph TD;
-    Read_Parameters-->Parameter_List;
-    Parameter_List-->GeneratePermutation;
+    Read_Parameters-->Parameter-1;
+    Read_Parameters-->Parameter-2;
+    Read_Parameters-->Parameter-3;
+    Parameter-1-->Value-1;
+    Parameter-1-->Value-2;
+    Parameter-1-->Value-3;
     GeneratePermutation-->CurlCall;
     CurlCall-->ImageCreated;
 ```
