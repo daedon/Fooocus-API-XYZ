@@ -30,7 +30,7 @@ The first time you use a jobName:
 * Add, Modify, Delete parameters in "jobs/jobName/parms".
 * To set default parameters for all future jobs, edit the `defaults` directories.
 
-###### A simple example with 3 parameter files that have more than 1 value is included in myJob.
+##### A simple example with 3 parameter files that have more than 1 value is included in myJob.
 
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contain 5 samples from the included demo job.
 The characters in the first 3 positions of the file name serve to sort and determine the order the parameters will be processed.
