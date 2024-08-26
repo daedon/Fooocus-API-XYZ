@@ -165,11 +165,10 @@ Colons can be used to align columns.
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 
-
+| File |
 | _1_base_model    | _2_resolution    |_3_guidance_scale|                 |
 | ---------------- | ---------------- |---------------- |---------------- |
 | juggernautXL_v8  | 512*640          | 2.0             |                 |
 | realisticPhoto   | 640*640          | 3.0             |                 |
 |                  | 1024*1024        |                 |                 |
-| ---------------- | ---------------- |---------------- |---------------- |
 
