@@ -1,5 +1,0 @@
-#!/bin/bash
-# Sample bash file
-cd ~/_python_/Fooocus-API-XYZ
-python3 ./xyz.py $*
-
