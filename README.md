@@ -74,9 +74,9 @@ saveNameCFG = 0: Image file name contains no parameters, only jobName, image # a
 saveNameCFG = 1: Image name contains only the parameter value.
 saveNameCFG = 2: Image name contains both parameter name and value.
 
-  myJob_0001_024844
-  myJob_0001_juggernautXLv8_1024x1024_18_024844
-  myJob_0001_base_model_juggernautXLv8__resolution_1024x1024__steps_18_024844
+0: myJob_0001_024844
+1: myJob_0001_juggernautXLv8_1024x1024_18_024844
+2: myJob_0001_base_model_juggernautXLv8__resolution_1024x1024__steps_18_024844
 ```
 
 If `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in the file name.
