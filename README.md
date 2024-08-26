@@ -32,10 +32,11 @@ The first time you use a jobName:
 
 ##### A simple example with 3 parameter files that have more than 1 value is included in myJob.
 
-Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contains 5 samples from the demo job.
+Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contains 5 parameters from the demo job.
 The characters in the first 3 positions of a parameter's' file name serve to sort and determine the order the parameters will be processed.
-In the example below, only base_model, resolution and guidance_scale will be used to build save_name since only they vary.
-xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
+In the example below, resolution, guidance_scale and sharpness will automatically be used to build save_name since only they vary. 
+`steps` will be included in save_name because it ends with an "_".
+xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API. 
 
 | FILE NAME       | _0_steps\_       | _1_resolution    |_2_guidance_scale|  _3_sharpness | ___image_number |
 | ----------------| ---------------- | ---------------- |---------------- |----------------|---------------- |
