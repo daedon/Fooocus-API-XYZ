@@ -146,37 +146,38 @@ graph TD;
     Read_Parameters-->List_A;
     Read_Parameters-->List_B;
     Read_Parameters-->List_C;
-    List_A-->A[1];
-    List_A-->A[2];
-    List_B-->B[1];
-    List_B-->B[2];
-    List_C-->C[1];
-    List_C-->C[2];
+    List_A-->A_Line-1;
+    List_A-->A_Line-2;
+    List_B-->B_Line-1;
+    List_B-->B_Line-2;
+    List_C-->C_Line-1;
+    List_C-->C_Line-2;
 
-    A[1]-->Generate_Permutations;
-    A[2]-->Generate_Permutations;
-    B[1]-->Generate_Permutations;
-    B[2]-->Generate_Permutations;
-    C[1]-->Generate_Permutations;
-    C[2]-->Generate_Permutations;
+    A_Line-1-->Generate_Permutation;
+    A_Line-2-->Generate_Permutation;
+    B_Line-1-->Generate_Permutation;
+    B_Line-2-->Generate_Permutation;
+    C_Line-1-->Generate_Permutation;
+    C_Line-2-->Generate_Permutation;
 
-    Generate_Permutations-->A1_B1_C1;
-    Generate_Permutations-->A1_B1_C2;
-    Generate_Permutations-->A1_B2_C1;
-    Generate_Permutations-->A1_B2_C2;
-    Generate_Permutations-->A2_B1_C1;
-    Generate_Permutations-->A2_B1_C2;
-    Generate_Permutations-->A2_B2_C1;
-    Generate_Permutations-->A2_B2_C2;
+    Generate_Permutation-->A1_B1_C1;
+    Generate_Permutation-->A1_B1_C2;
+    Generate_Permutation-->A1_B2_C1;
+    Generate_Permutation-->A1_B2_C2;
+    Generate_Permutation-->A2_B1_C1;
+    Generate_Permutation-->A2_B1_C2;
+    Generate_Permutation-->A2_B2_C1;
+    Generate_Permutation-->A2_B2_C2;
 
-    A1_B1_C1-->Curl_Call;
-    A1_B1_C2-->Curl_Call;
-    A1_B2_C1-->Curl_Call;
-    A1_B2_C2-->Curl_Call;
-    A2_B1_C1-->Curl_Call;
-    A2_B1_C2-->Curl_Call;
-    A2_B2_C1-->Curl_Call;
-    A2_B2_C2-->Curl_Call;
+    A1_B1_C1-->CurlCall;
+    A1_B1_C2-->CurlCall;
+    A1_B2_C1-->CurlCall;
+    A1_B2_C2-->CurlCall;
+    A2_B1_C1-->CurlCall;
+    A2_B1_C2-->CurlCall;
+    A2_B2_C1-->CurlCall;
+    A2_B2_C2-->CurlCall;
+
 
 ```
 
