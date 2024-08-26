@@ -158,4 +158,7 @@ A Gradio interface for this project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
 `git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
 
-
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
