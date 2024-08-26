@@ -141,3 +141,10 @@ A Gradio interface for this project.
 
 `git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
