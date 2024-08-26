@@ -46,7 +46,7 @@ xyz will generate all permutations of the following parameters and make curl cal
 | line 3 in file  |                  | 1024*1024        |                 |                |                 |
 
 The parameters in the table above will produce the following files:
-<details>
+<detail>
 ```
 myJob_0001_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_2.0_033035
 myJob_0002_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_3.0_033035
@@ -61,7 +61,8 @@ myJob_0010_steps_25_resolution_1024x1024_guidance_scale_4.0_sharpness_3.0_033035
 myJob_0011_steps_25_resolution_1024x1024_guidance_scale_4.5_sharpness_2.0_033035
 myJob_0012_steps_25_resolution_1024x1024_guidance_scale_4.5_sharpness_3.0_033035
 ```
-</details>
+</detail>
+
 `save_name` can be configured with `saveNameCFG` in config.py:
 When `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in `save_name`.
 To force the inclusion of a parameter with only one value, terminate the parameter's' file name with an "_", eg `___seed_`.
