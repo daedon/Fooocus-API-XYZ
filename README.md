@@ -130,9 +130,9 @@ To make `sampler_name` one of your variable parameters:
 
 ```mermaid
 graph TD;
-    Read_Parameters[Read Parameters Files]-->fileA[File A];
-    Read_Parameters-->fileB[File B];
-    Read_Parameters-->fileC[File C];
+    Read_Parameters[Go]-->fileA[Read File A];
+    Read_Parameters-->fileB[Read File B];
+    Read_Parameters-->fileC[Read File C];
 
     fileA-->listA[List A];
     fileB-->listB[List B];
