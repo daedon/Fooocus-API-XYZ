@@ -28,31 +28,17 @@ The first time you use a jobName:
 
 xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 
-Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory.
+Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contain only 5 samples.
+The characters in the first 3 positions of the file name serve to sort and determine the order the parameters will be processed.
+In the above example, only the base_model, resolution and guidance_scale will be used to biuld the image
 
-`FILE: _1_base_model`
-```
-# 2 Base Models
-juggernautXL_v8
-realisticPhoto_v20
-```
-`FILE: _2_resolution`
-```
-# 3 Resolutions
-512*512
-640*640
-1024*1024
-```
-`FILE: _3_guidance_scale`
-```
-# 2 guidance scales
-2.0
-3.0
-```
+| FILE NAME       | _0_steps         | _1_base_model    | _2_resolution   |_3_guidance_scale|  ___image_number |
+| ----------------| ---------------- | ---------------- |---------------- |----------------|---------------- |
+| line 1 in file  | 22               | juggernautXL_v8  | 512*640         | 2.0             | 1               |  
+| line 2 in file  |                  | realisticPhoto   | 640*640         | 3.0             |                  |                 
+| line 3 in file  |                  |                  | 1024*1024       |                 |                  |                 
 
-Note that the characters in the first 3 positions of the file name determines the order the images will be generated. 
-
-The above parameter files will generate the following output:
+The parameters in the table above generate the following output:
 ```
 Job "myJob" has 13 parameters:
   ['steps', 'base_model', 'resolution', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
@@ -158,20 +144,8 @@ A Gradio interface for this project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
 `git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
 
-Colons can be used to align columns.
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-
-
-| FILE NAME       | _0_steps         | _1_base_model    | _2_resolution    |_3_guidance_scale|  ___image_number |
-| ----------------| ---------------- | ---------------- |---------------- |----------------|---------------- |
-| line 1 in file  | 22               | juggernautXL_v8  | 512*640          | 2.0             | 1               |  
-| line 2 in file  |                  | realisticPhoto   | 640*640          | 3.0             |                  |                 
-| line 3 in file  |                  |                  | 1024*1024        |                 |                  |                 
 
 
 
