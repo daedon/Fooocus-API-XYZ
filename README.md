@@ -1,9 +1,5 @@
 ### Fooocus-API-XYZ: Variable Parameter Image Generator for Fooocus-API
-#### Generates Fooocus images with unrestricted parameter variations.
-
-Reads values from parameter files and generates images for every permutation of these parameter values.
-
-(more details below, see simple example after Quick Start)
+Generates Fooocus images with unrestricted parameter variations by reading reading values from parameter files and generating images for every permutation of these parameters (see basic example after Quick Start)
 
 #### Quick Start
 
@@ -154,9 +150,9 @@ A Gradio interface for this project.
 
 #### Miscellaneous
 * This project started out as 6 lines of bash.
-* Linux only at this time.
+* Linux only ()at this time.)
 * My first git project.
-* Still learning markup.
+* Still learning ~~markup~~ markdown.
 * My first github project.
 * My first python project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
