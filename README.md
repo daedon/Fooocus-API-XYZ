@@ -43,30 +43,20 @@ xyz will generate all permutations of the following parameters and make curl cal
 | line 2 in file  |                  | realisticPhoto   | 640*640         | 3.0             |                  |                 
 | line 3 in file  |                  |                  | 1024*1024       |                 |                  |                 
 
-The parameters in the table above should produce the following output:
+The parameters in the table above will produce the following files:
 ```
-Job "myJob" has 13 parameters:
-  ['base_model', 'steps', 'resolution', 'guidance_scale', 'sharpness', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'style']
-The following parameters have more than one value:
-  resolution[3] 
-  guidance_scale[2] 
-  sharpness[2] 
-Fooocus "image_number" is set to 1 image per Curl call
-12 Curl calls will be made.
-12 images will be generated (3 * 2 * 2 * 1)
-Generate the 12 images now ? (y/n) y
-save_name: "myJob_0001_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_2.0_032217"
-save_name: "myJob_0002_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_3.0_032217"
-save_name: "myJob_0003_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_2.0_032217"
-save_name: "myJob_0004_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_3.0_032217"
-save_name: "myJob_0005_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_2.0_032217"
-save_name: "myJob_0006_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_3.0_032217"
-save_name: "myJob_0007_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_2.0_032217"
-save_name: "myJob_0008_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_3.0_032217"
-save_name: "myJob_0009_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_2.0_032217"
-save_name: "myJob_0010_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_3.0_032217"
-save_name: "myJob_0011_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_2.0_032217"
-save_name: "myJob_0012_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_3.0_032217"
+myJob_0001_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_2.0_032217
+myJob_0002_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_3.0_032217
+myJob_0003_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_2.0_032217
+myJob_0004_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_3.0_032217
+myJob_0005_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_2.0_032217
+myJob_0006_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_3.0_032217
+myJob_0007_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_2.0_032217
+myJob_0008_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_3.0_032217
+myJob_0009_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_2.0_032217
+myJob_0010_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_3.0_032217
+myJob_0011_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_2.0_032217
+myJob_0012_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_3.0_032217
 ```
 `save_name` can be configured with `saveNameCFG` in config.py:
 When `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in `save_name`.
