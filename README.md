@@ -32,9 +32,9 @@ The first time you use a jobName:
 
 ##### A simple example with 3 parameter files that have more than 1 value is included in myJob.
 
-Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contain 5 samples from the included demo job.
+Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contains 5 samples from the demo job.
 The characters in the first 3 positions of the file name serve to sort and determine the order the parameters will be processed.
-In the example below, only the base_model, resolution and guidance_scale will be used to build the image file name.
+In the example below, only the base_model, resolution and guidance_scale will be used to build the image file name since only they vary.
 xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 
 | FILE NAME       | _0_steps         | _1_base_model    | _2_resolution   |_3_guidance_scale|  ___image_number |
@@ -72,10 +72,8 @@ The save_name (image file name) can be configured with saveNameCFG in config.py:
 ```
 saveNameCFG = 0: Image file name contains no parameters, only jobName, image # and time stamp. 
   myJob_0001_024844
-
 saveNameCFG = 1: Image name contains only the parameter value.
   myJob_0001_juggernautXLv8_1024x1024_18_024844
-
 saveNameCFG = 2: Image name contains both parameter name and value.
   myJob_0001_base_model_juggernautXLv8__resolution_1024x1024__steps_18_024844
 ```
