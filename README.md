@@ -146,7 +146,7 @@ graph TD;
     Read_Parameters-->List_A;
     Read_Parameters-->List_B;
     Read_Parameters-->List_C;
-    List_A-->A_Line-1;
+    List_A-->A_Line-\[1;
     List_A-->A_Line-2;
     List_B-->B_Line-1;
     List_B-->B_Line-2;
