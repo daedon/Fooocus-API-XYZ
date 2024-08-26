@@ -33,11 +33,11 @@ The first time you use a jobName:
 ##### A simple example with 3 parameter files that have more than 1 value is included in myJob.
 
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contains 5 samples from the demo job.
-The characters in the first 3 positions of the file name serve to sort and determine the order the parameters will be processed.
-In the example below, only the base_model, resolution and guidance_scale will be used to build the image file name since only they vary.
+The characters in the first 3 positions of a parameter's' file name serve to sort and determine the order the parameters will be processed.
+In the example below, only base_model, resolution and guidance_scale will be used to build save_name since only they vary.
 xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 
-| FILE NAME       | _0_steps         | _1_base_model    | _2_resolution   |_3_guidance_scale|  ___image_number |
+| FILE NAME       | _0_steps\_         | _1_base_model    | _2_resolution   |_3_guidance_scale|  ___image_number |
 | ----------------| ---------------- | ---------------- |---------------- |----------------|---------------- |
 | line 1 in file  | 22               | juggernautXL_v8  | 512*640         | 2.0             | 1               |  
 | line 2 in file  |                  | realisticPhoto   | 640*640         | 3.0             |                  |                 
@@ -46,35 +46,35 @@ xyz will generate all permutations of the following parameters and make curl cal
 The parameters in the table above should produce the following output:
 ```
 Job "myJob" has 13 parameters:
-  ['steps', 'base_model', 'resolution', 'guidance_scale', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'sharpness', 'style']
+  ['base_model', 'steps', 'resolution', 'guidance_scale', 'sharpness', 'image_number', 'negative_prompt', 'performance', 'prompt', 'refiner_model', 'refiner_switch', 'seed', 'style']
 The following parameters have more than one value:
-  base_model[2] 
   resolution[3] 
   guidance_scale[2] 
+  sharpness[2] 
 Fooocus "image_number" is set to 1 image per Curl call
 12 Curl calls will be made.
-12 images will be generated (2 * 3 * 2 * 1)
+12 images will be generated (3 * 2 * 2 * 1)
 Generate the 12 images now ? (y/n) y
-"myJob_0001_steps_25_base_model_juggernautXLv8_resolution_512x512_guidance_scale_2.0_082317"
-"myJob_0002_steps_25_base_model_juggernautXLv8_resolution_512x512_guidance_scale_3.0_082317"
-"myJob_0003_steps_25_base_model_juggernautXLv8_resolution_640x640_guidance_scale_2.0_082317"
-"myJob_0004_steps_25_base_model_juggernautXLv8_resolution_640x640_guidance_scale_3.0_082317"
-"myJob_0005_steps_25_base_model_juggernautXLv8_resolution_1024x1024_guidance_scale_2.0_082317"
-"myJob_0006_steps_25_base_model_juggernautXLv8_resolution_1024x1024_guidance_scale_3.0_082317"
-"myJob_0007_steps_25_base_model_realisticPhotov20_resolution_512x512_guidance_scale_2.0_082317"
-"myJob_0008_steps_25_base_model_realisticPhotov20_resolution_512x512_guidance_scale_3.0_082317"
-"myJob_0009_steps_25_base_model_realisticPhotov20_resolution_640x640_guidance_scale_2.0_082317"
-"myJob_0010_steps_25_base_model_realisticPhotov20_resolution_640x640_guidance_scale_3.0_082317"
-"myJob_0011_steps_25_base_model_realisticPhotov20_resolution_1024x1024_guidance_scale_2.0_082317"
-"myJob_0012_steps_25_base_model_realisticPhotov20_resolution_1024x1024_guidance_scale_3.0_082317"
+save_name: "myJob_0001_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_2.0_032217"
+save_name: "myJob_0002_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_3.0_032217"
+save_name: "myJob_0003_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_2.0_032217"
+save_name: "myJob_0004_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_3.0_032217"
+save_name: "myJob_0005_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_2.0_032217"
+save_name: "myJob_0006_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_3.0_032217"
+save_name: "myJob_0007_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_2.0_032217"
+save_name: "myJob_0008_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_3.0_032217"
+save_name: "myJob_0009_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_2.0_032217"
+save_name: "myJob_0010_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_3.0_032217"
+save_name: "myJob_0011_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_2.0_032217"
+save_name: "myJob_0012_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_3.0_032217"
 ```
-The save_name (image file name) can be configured with saveNameCFG in config.py:
-When `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in save_name.
-To force the inclusion of a parameter with only one value, terminate the parameter file name with an "_", eg `___seed_`.
+`save_name` can be configured with `saveNameCFG` in config.py:
+When `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in `save_name`.
+To force the inclusion of a parameter with only one value, terminate the parameter's' file name with an "_", eg `___seed_`.
 ```
-saveNameCFG = 0: Image file name contains no parameters, only jobName, image # and time stamp. 
-saveNameCFG = 1: Image name contains only the parameter value.
-saveNameCFG = 2: Image name contains both parameter name and value.
+saveNameCFG = 0: save_name contains jobName, image number and time stamp. 
+saveNameCFG = 1: save_name contains parameter value.
+saveNameCFG = 2: save_name contains both the parameter name and parameter value.
 
 0: myJob_0001_024844
 1: myJob_0001_juggernautXLv8_1024x1024_18_024844
