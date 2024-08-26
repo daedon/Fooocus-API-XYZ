@@ -28,9 +28,10 @@ The first time you use a jobName:
 * Associated sub-directories will be created.
 * Default files will be copied to "jobs/jobName".
 * Add, Modify, Delete parameters in "jobs/jobName/parms".
+* Edit the curl template "jobs/jobName/curl.template".
 * To set default parameters for all future jobs, edit the `defaults` directories.
 
-##### A simple example with 3 parameter files that have more than 1 value is included in myJob.
+##### Example of 3 variable parameters
 
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The following table contains 5 parameters from the demo job.
 The characters in the first 3 positions of a parameter's' file name serve to sort and determine the order the parameters will be processed.
@@ -45,6 +46,7 @@ xyz will generate all permutations of the following parameters and make curl cal
 | line 3 in file  |                  | 1024*1024        |                 |                |                 |
 
 The parameters in the table above will produce the following files:
+<details>
 ```
 myJob_0001_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_2.0_033035
 myJob_0002_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_3.0_033035
@@ -59,6 +61,7 @@ myJob_0010_steps_25_resolution_1024x1024_guidance_scale_4.0_sharpness_3.0_033035
 myJob_0011_steps_25_resolution_1024x1024_guidance_scale_4.5_sharpness_2.0_033035
 myJob_0012_steps_25_resolution_1024x1024_guidance_scale_4.5_sharpness_3.0_033035
 ```
+</details>
 `save_name` can be configured with `saveNameCFG` in config.py:
 When `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in `save_name`.
 To force the inclusion of a parameter with only one value, terminate the parameter's' file name with an "_", eg `___seed_`.
@@ -106,6 +109,15 @@ To reduce repetiion in large permuations and create N images with random seeds, 
 
 
 #### Customizing
+
+Fooocus-API-XYZ is data driven. It:
+* reads parameter files line by line into lists matching the parameter name.
+* generates permutations of all the parameter values stored in the parameter lists.
+* for each permutation, replaces all the parameters in the curl template
+* saves the curl template to a bash file named `runCURL`.
+* * makes `runCURL` executable and runs it.
+* on to the next iteration.
+
 
 The curl template has close to 100 parameters, only a dozen or so are set up by default.
 
