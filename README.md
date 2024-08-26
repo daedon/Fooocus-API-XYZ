@@ -77,22 +77,24 @@ myJob_0001_steps=25----resolution=512x512----guidance_scale=4.0----sharpness=2.0
 ```
 #### Summary
 * Requires `Fooocus-API` to be running.
-* Reads parameter files in a job's "parms" subdirectory.
-* Files are stored in "jobs/myJobName".
+* Reads parameter values from parameter files in the job's `parms` subdirectory.
+* The curl template can be customized for each individual job.
 * Each file represents a Fooocus parameter: eg, `___steps`, `___resolution`, `___prompt`, `___base_model`.
+* The curl template has substitution parameters matching the paramater file names (see Customzing below).
 * Each parameter file line represents 1 value for that a parameter.
-* The 1st character of each file name must be an underscore "_".
-* The 1st 3 characters of each file name are used for documentation and/or sorting purposes only.
-* The 1st 3 characters of each file are discarded.
-* The files are read in alphabetical order, hence the first 3 characters decide the order of the permutations.
+* The 1st character of each parameter file name must be an underscore "_".
+* The 1st 3 characters of each parameter file name are used for documentation and sorting purposes only. 
+* The 1st 3 characters of each parameter file are discarded.
+* The files are read in alphabetical order, hence the first 3 characters decide the order of the parameters.
 * An array variable is created for each parameter with the same name.
-* The contents of each parameter file is read line by line into the elements of the corresponding array/list.
-* Empty lines are ignored.
-* Lines beginning with a "#" are comments and ignored.
-* No parameter values are read after a line with a "."
+* The contents of each parameter file is read line by line into the corresponding array/list.
+* Empty lines in are ignored (in parameter files).
+* Lines beginning with a "#" are comments and ignored (in parameter files).
+* No parameter values are read after a line with a "." (in parameter files).
 * Fooocus-API-XYZ generates all permutations of the parameter values in the order they were read.
 * For each permutation of all the values, Fooocus-API-XYZ makes a curl call to fooocus-API.
-* For each permutation, substitutes all `___parameters` in `curl.template`, writes to and executes `runCURL`.
+* For each permutation, all the `___parameters` in the `curl.template` are replaced by the current value.
+* The current iteration of `curl.template` is written to `runCURL` and `runCURL` is executed.
 
 #### Configuring
 
@@ -135,25 +137,4 @@ A Gradio interface for this project.
 * My first python project.
 * Getting to that 1st push was painful, wish I knew about this sooner:
 `git remote set-url origin https://_my_token_@github.com/daedon/Fooocus-API-XYZ.git`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
