@@ -37,26 +37,26 @@ The characters in the first 3 positions of a parameter's' file name serve to sor
 In the example below, only base_model, resolution and guidance_scale will be used to build save_name since only they vary.
 xyz will generate all permutations of the following parameters and make curl calls to Fooocus-API.
 
-| FILE NAME       | _0_steps\_         | _1_base_model    | _2_resolution   |_3_guidance_scale|  ___image_number |
+| FILE NAME       | _0_steps\_       | _1_resolution    |_2_guidance_scale|  _3_sharpness | ___image_number |
 | ----------------| ---------------- | ---------------- |---------------- |----------------|---------------- |
-| line 1 in file  | 22               | juggernautXL_v8  | 512*640         | 2.0             | 1               |  
-| line 2 in file  |                  | realisticPhoto   | 640*640         | 3.0             |                  |                 
-| line 3 in file  |                  |                  | 1024*1024       |                 |                  |                 
+| line 1 in file  | 22               |   512*640        | 4.0             |  2.0           |      1          |
+| line 2 in file  |                  |   640*640        | 4.5             |  3.0           |                 |
+| line 3 in file  |                  | 1024*1024        |                 |                |                 |
 
 The parameters in the table above will produce the following files:
 ```
-myJob_0001_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_2.0_032217
-myJob_0002_steps_25_resolution_512x512_guidance_scale_2.0_sharpness_3.0_032217
-myJob_0003_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_2.0_032217
-myJob_0004_steps_25_resolution_512x512_guidance_scale_3.0_sharpness_3.0_032217
-myJob_0005_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_2.0_032217
-myJob_0006_steps_25_resolution_640x640_guidance_scale_2.0_sharpness_3.0_032217
-myJob_0007_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_2.0_032217
-myJob_0008_steps_25_resolution_640x640_guidance_scale_3.0_sharpness_3.0_032217
-myJob_0009_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_2.0_032217
-myJob_0010_steps_25_resolution_1024x1024_guidance_scale_2.0_sharpness_3.0_032217
-myJob_0011_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_2.0_032217
-myJob_0012_steps_25_resolution_1024x1024_guidance_scale_3.0_sharpness_3.0_032217
+myJob_0001_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_2.0_033035
+myJob_0002_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_3.0_033035
+myJob_0003_steps_25_resolution_512x512_guidance_scale_4.5_sharpness_2.0_033035
+myJob_0004_steps_25_resolution_512x512_guidance_scale_4.5_sharpness_3.0_033035
+myJob_0005_steps_25_resolution_640x640_guidance_scale_4.0_sharpness_2.0_033035
+myJob_0006_steps_25_resolution_640x640_guidance_scale_4.0_sharpness_3.0_033035
+myJob_0007_steps_25_resolution_640x640_guidance_scale_4.5_sharpness_2.0_033035
+myJob_0008_steps_25_resolution_640x640_guidance_scale_4.5_sharpness_3.0_033035
+myJob_0009_steps_25_resolution_1024x1024_guidance_scale_4.0_sharpness_2.0_033035
+myJob_0010_steps_25_resolution_1024x1024_guidance_scale_4.0_sharpness_3.0_033035
+myJob_0011_steps_25_resolution_1024x1024_guidance_scale_4.5_sharpness_2.0_033035
+myJob_0012_steps_25_resolution_1024x1024_guidance_scale_4.5_sharpness_3.0_033035
 ```
 `save_name` can be configured with `saveNameCFG` in config.py:
 When `saveNameCFG` is 1 or 2, parameters with more than 1 value will automatically be included in `save_name`.
