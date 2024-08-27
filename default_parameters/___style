@@ -4,9 +4,7 @@
 
 # Empty lines are ignored
 
-# No parameters are read beyond a line with a period.
-
-# Hence this file has ony 1 parameter
+# No parameters are read beyond a line starting with a period.
 
 .
 

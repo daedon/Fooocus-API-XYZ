@@ -1,12 +1,12 @@
 0.1
-.
+
 # Comments start with a cross-hatch and are ignored.
 
 # Empty lines are ignored
 
-# No parameters are read beyond a line with a period.
+# No parameters are read beyond a line starting with a period.
 
-# Hence this file has only one parameter
+.
 
 1.0
 0.1

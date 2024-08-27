@@ -4,9 +4,7 @@ juggernautXL_v8Rundiffusion.safetensors
 
 # Empty lines are ignored
 
-# No parameters are read beyond a line with a period.
-
-# This file has 2 parameters
+# No parameters are read beyond a line starting with a period.
 
 .
 realisticStockPhoto_v20.safetensors

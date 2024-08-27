@@ -1,24 +1,8 @@
 -1
-.
-# Comments start with a cross-hatch and are ignored.
-# Empty lines are ignored
-# No parameters are read beyond a line with a period.
-# Hence this file has only one parameter
 
-# When image_number is greater than 1, images with sequential seed numbers are generated.
-# To generate images with random and non-sequential seeds, do the following
--1
--1
--1
--1
--1
--1
--1
--1
--1
--1
--1
--1
--1
--1
+# Comments start with a cross-hatch and are ignored.
+
+# Empty lines are ignored
+
+# No parameters are read beyond a line starting with a period.
 

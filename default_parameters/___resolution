@@ -1,9 +1,11 @@
 1536*1024
 
 # Comments start with a cross-hatch and are ignored.
+
 # Empty lines are ignored
-# No parameters are read beyond a line with a period.
-# Hence this file has only one parameter
+
+# No parameters are read beyond a line starting with a period.
+
 .
 
 1536*1280

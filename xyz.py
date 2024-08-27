@@ -1,9 +1,10 @@
-#08-25_0106 
+#08-27_0733
 import os
 import re
 import sys
 import time 
 import shutil
+import random
 import itertools
 from datetime import datetime
 os.system('clear')
@@ -58,6 +59,7 @@ def generateImages( jobName):
     nParmFiles  = 0
     numberOfMultiParms= 0
     multiplications= ""
+    ############################################################# Process parameters
     for fileName in sorted( os.listdir(parmsDirectory)):      ### READ ALL PARAMETERS, files must start with "_XY"
         if fileName.startswith("_"):                            # 1st 3 characters Parameter files are only
             parmName= fileName[3:]                              # used for sorting and are discarded.
@@ -70,7 +72,8 @@ def generateImages( jobName):
                print(f"WARNING: Duplicate parameter \"{parmName}\" ignored")
                continue                                         # Discard duplicate parameter file
             nParmFiles+= 1
-            next_parm_value= readParmFile( fileName)
+            next_parm_value= readParmFile( fileName)            # Read paramater lines into list
+
             if parmName == "image_number":
                image_number= int(next_parm_value[0])    
             parm_names.append( parmName)
@@ -98,13 +101,14 @@ def generateImages( jobName):
     print(f"{totalImages} image{S(totalImages)} will be generated ({multiplications})")
     if totalImages == 0:
        sys.exit( 1)
-    ############################################################################################################
     answer = input(f"Generate the {totalImages} image{S(totalImages)} now ? (y/n) ").strip().lower()
     if answer != 'y' or totalImages == 0:
        sys.exit( 1)
+    ######################################################################### Generate Images
     startTime = time.time()                                                 # Start timer
+    done_list= []
     currentCurlCall= 0
-    for permutation in permutations:                                        # For each combination of parameters
+    for permutation in permutations:                                        # For all combinations of parameters
         currentCurlCall+= 1
         parmDump= ""
         with open( currentJobDir+'/curl.template', 'r') as f:       
@@ -112,9 +116,13 @@ def generateImages( jobName):
         fileNameParms= ""
         fNameDescription= "{jobName}{Curl#}"
         args= []
+        #######################################################
         for parmName, parmValue in zip(parm_names,permutation):             # Fill Curl Template
+            if "random" in program_options:                                 # If random, override permutation value
+               parmValue= random.choice(parm_values[parm_names.index( parmName)])
             parmDump+= f"{parmName} : {parmValue}\n"
             if parm_count[parmName] > 1 or name_include[parmName]:          # Include value of Multi-value parameters in image file name
+
                args+= parmValue
                pV= parmValue
                pV= parmValue.replace( ".safetensors", "").replace( " ", "").replace( "*", "x").replace( "_", "").replace( " ", "_")\
@@ -134,11 +142,18 @@ def generateImages( jobName):
                     fileNameParms+= f"{parmSeparator}{parmName}{parmNVSeparator}{pV[:maxFileNameParm]}"    
                fNameDescription+= "{" + parmName + "}"
             template= template.replace( f"___{parmName}", str(parmValue))   # Substitute ___place-holder for actual parameter value
-        lines = template.splitlines()                                       # Look for un-replaced parameters
-        missing_parameters= [line for line in lines if "___" in line]
+        
+        if ("random" in program_options) and  fileNameParms in done_list:            
+            print( f"Skipping {fileNameParms}")
+            continue
+        else:
+            done_list.append( fileNameParms)
+
+        lines = template.splitlines()                                       
+        missing_parameters= [line for line in lines if "___" in line]       # Check for un-replaced parameters
         if len( missing_parameters) > 0:
            for line in missing_parameters:
-               print(f"Missing Parameter file {line}")
+               print(f"Missing Parameter file {line}")                      # Print un-replaced parameters
            sys.exit( 1)
 
         fNameDescription+= "{timeStamp HrMinSec}"
@@ -151,7 +166,6 @@ def generateImages( jobName):
         print(f"{barCharacter * 100}")
         print(f"Curl {currentCurlCall} of {totalCurlCalls}")
         print(f"save_name: \"{fName}\"")
-        ############################################################################################################
         status= os.system( f"./runCURL >{logsDirectory}/{fName}.curl.log >>{logsDirectory}/{fName}.curl.log")
         if saveCurlFiles:
            shutil.copy( 'runCURL', os.path.join( curlDirectory, fName))
@@ -167,18 +181,18 @@ def generateImages( jobName):
         if imagesRemaining > 0:
            timeRemaining= timeInDHMS( int(imagesRemaining * secondsPerImage))
            print( f"{imagesRemaining} image{S(imagesRemaining)} remaining, ESTIMATED time remaining: {timeRemaining}")
-
     return currentCurlCall
 
 ##########################################################################################
 if __name__ == "__main__":
-  if len( sys.argv) != 2:
-     print( "Usage: python xyz.py <JobName>")
+  if len( sys.argv) < 2:
+     print( "Usage: python xyz.py JobName [random]")
      sys.exit( 1)
-  jobName = sys.argv[1]
+  else:
+     jobName = sys.argv[1]
+     program_options = [item.lower() for item in sys.argv[2:]]
   with open( 'config.py') as f:
        code = f.read( )
        exec( code)
   generateImages( jobName)
-# print( globals())
 
