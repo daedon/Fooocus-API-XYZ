@@ -30,7 +30,7 @@ def S( n):
 ##########################################################################################
 def readParmFile(parmFile):
     lines = []
-    with open( dirs['parms']+"/"+parmFile, 'r', encoding='utf-8') as file:
+    with open(parmsDirectory+"/"+parmFile, 'r', encoding='utf-8') as file:
          for line in file:
              stripped_line = line.strip()
              if stripped_line == ".":                            # Don't read parms after "."
@@ -61,7 +61,7 @@ def generateImages( jobName):
     numberOfMultiParms= 0
     multiplications= ""
     ############################################################# Process parameters
-    for fileName in sorted( os.listdir( dirs['parms'])):        # READ ALL PARAMETERS, files starting with "_"
+    for fileName in sorted( os.listdir(parmsDirectory)):        # READ ALL PARAMETERS, files starting with "_"
         if fileName.startswith("_"):                            # 1st 3 characters Parameter files are only
             parmName= fileName[3:]                              # used for sorting and are discarded.
             if parmName.endswith("_"):                          # Parm name to be included in file name
@@ -103,7 +103,6 @@ def generateImages( jobName):
     if totalImages == 0:
        sys.exit( 1)
     answer = input(f"Generate the {totalImages} image{S(totalImages)} now ? (y/n) ").strip().lower()
-
     if answer != 'y' or totalImages == 0:
        sys.exit( 1)
     ######################################################################### Generate Images
@@ -113,7 +112,7 @@ def generateImages( jobName):
     for permutation in permutations:                                        # For all combinations of parameters
         currentCurlCall+= 1
         parmDump= ""
-        with open( dirs['job']+'/curl.template', 'r', encoding='utf-8') as template_file:
+        with open( currentJobDir+'/curl.template', 'r', encoding='utf-8') as template_file:
             template = template_file.read()                                 # Read bash curl template script
         fileNameParms= ""
         fNameDescription= "{jobName}{Curl#}"
@@ -167,11 +166,11 @@ def generateImages( jobName):
         print(f"{barCharacter * 100}")
         print(f"Curl {currentCurlCall} of {totalCurlCalls}")
         print(f"save_name: \"{fName}\"")
-        status= os.system( f"./runCURL >{dirs['logs']}/{fName}.curl.log >>{dirs['logs']}/{fName}.curl.log")
+        status= os.system( f"./runCURL >{logsDirectory}/{fName}.curl.log >>{logsDirectory}/{fName}.curl.log")
         if saveCurlFiles:
-           shutil.copy( 'runCURL', os.path.join( dirs['curls'], fName))
+           shutil.copy( 'runCURL', os.path.join( curlDirectory, fName))
         if saveDumpFiles:
-           with open( f"{dirs['dump']}/{fName}.parms", 'w', encoding='utf-8') as dFile:
+           with open( f"{dumpDirectory}/{fName}.parms", 'w', encoding='utf-8') as dFile:
              dFile.write( parmDump)
         if status != 0:
            print(f"\nExit status: {status}")

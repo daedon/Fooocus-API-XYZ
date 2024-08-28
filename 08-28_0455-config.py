@@ -13,28 +13,29 @@ barCharacter    = '-'           # Output line between each curl call
 jobsDirectory   = f"./jobs/"                # Root job directory
 defaultParmsDir = f"./default_parameters"   # Included with scripts
 defaultTempltDir= f"./default_templates"    # Included with scripts
-dirs = { 'job'  : f"jobs/{job}", 
-         'parms': f"jobs/{job}/parms", 
-         'logs' : f"jobs/{job}/logs", 
-         'dump' : f"jobs/{job}/dump", 
-         'curls': f"jobs/{job}/curls"}
+currentJobDir   = f"jobs/{job}"         
+parmsDirectory  = f"{currentJobDir}/parms"  # User editable fooocus parameters
+dumpDirectory   = f"{currentJobDir}/dumps"  # Parameters used to create image
+logsDirectory   = f"{currentJobDir}/logs"   # 
+curlDirectory   = f"{currentJobDir}/curls"
+
+dirs = { currentJobDir: f"jobs/{job}", logsDirectory: f"{currentJobDir}/logs"}
+
+
+
 
 # Initialize directories and parameters if New job
-if not os.path.exists( dirs['parms']):
-   for directory in [ dirs['job'], dirs['logs'], dirs['curls'], dirs['parms'], dirs['dump']]:
+if not os.path.exists( parmsDirectory):
+   for directory in [ currentJobDir, logsDirectory, curlDirectory, parmsDirectory, dumpDirectory]:
        os.makedirs( directory, exist_ok=True)
-   [shutil.copy2(os.path.join(defaultParmsDir, f), dirs['parms']) for f in os.listdir(defaultParmsDir) if f.startswith('_')]   
-   shutil.copy( f"{defaultTempltDir}/curl.template", dirs['job'])         # Copy template
+   [shutil.copy2(os.path.join(defaultParmsDir, f), parmsDirectory) for f in os.listdir(defaultParmsDir) if f.startswith('_')]   
+   shutil.copy( f"{defaultTempltDir}/curl.template", currentJobDir)         # Copy template
    print( f"New Job \"{job}\" and associated directories have been created.")
-   print( f"Default parameter files have been copied to \"{dirs[ 'parms']}\".")
+   print( f"Default parameter files have been copied to \"{parmsDirectory}\".")
 
 #def print_vars():
 #    for var_name in globals():
 #        if not var_name.startswith('_'):
 #            print(f'{var_name}: {globals()[var_name]}')
-
-
-#  for key, value in dictionary.items():
-#        print(f"{key}: {value}")
 
 
