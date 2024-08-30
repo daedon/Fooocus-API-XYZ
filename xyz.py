@@ -22,6 +22,16 @@ from datetime import datetime
 os.system('clear')
 
 ##########################################################################################
+def abort( s):
+    print(f"ERROR: {s}")
+    sys.exit( 1)
+
+##########################################################################################
+def debug( s):
+    return
+    print( s)
+
+##########################################################################################
 def S( n):
     if int(n) == 1:
         return ""
@@ -75,6 +85,10 @@ def generateImages( jobName):
             nParmFiles+= 1
             next_parm_value= readParmFile( fileName)            # Read paramater lines into list
 
+            debug( f"{parmName}:{next_parm_value} {len(next_parm_value)}")
+            if len(next_parm_value) == 0:
+               abort( f"Parameter {parmName} has no value")
+
             if parmName == "image_number":
                image_number= int(next_parm_value[0])
             parm_names.append( parmName)
@@ -110,6 +124,7 @@ def generateImages( jobName):
     startTime = time.time()                                                 # Start timer
     done_list= []
     currentCurlCall= 0
+    
     for permutation in permutations:                                        # For all combinations of parameters
         currentCurlCall+= 1
         parmDump= ""
@@ -123,6 +138,7 @@ def generateImages( jobName):
             if "random" in program_options:                                 # If random, override permutation value
                parmValue= random.choice(parm_values[parm_names.index( parmName)])
             parmDump+= f"{parmName} : {parmValue}\n"
+            debug( f"parmName={parmName}, parmValue={parmValue}" )
             if parm_count[parmName] > 1 or name_include[parmName]:          # Include value of Multi-value parameters in image file name
 
                args+= parmValue
@@ -141,7 +157,7 @@ def generateImages( jobName):
                if saveNameCFG == 1:                                         # Include parameter value in file name
                     fileNameParms+= f"{parmSeparator}{pV[:maxFileNameParm]}"
                elif saveNameCFG == 2:                                       # Include parameter name & value in file name
-                    fileNameParms+= f"{parmSeparator}{parmName}{parmNVSeparator}{pV[:maxFileNameParm]}"
+                    fileNameParms+= f"{parmSeparator}{parmName.upper()[:maxFileNameParm]}{parmNVSeparator}{pV[:maxFileNameParm]}"
                fNameDescription+= "{" + parmName + "}"
             template= template.replace( f"___{parmName}", str(parmValue))   # Substitute ___place-holder for actual parameter value
 
