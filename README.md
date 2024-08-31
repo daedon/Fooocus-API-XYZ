@@ -38,10 +38,10 @@ In the example below, resolution, guidance_scale and sharpness will automaticall
 All permutations of the following parameters will be used to make curl calls to Fooocus-API. 
 
 | FILE NAME       | _0_steps\_       | _1_resolution    |_2_guidance_scale|  _3_sharpness | ___image_number |
-| ----------------| ---------------- | ---------------- |---------------- |----------------|---------------- |
-| line 1 in file  | 25               |   512*640        | 4.0             |  2.0           |      1          |
-| line 2 in file  |                  |   640*640        | 4.5             |  3.0           |                 |
-| line 3 in file  |                  | 1024*1024        |                 |                |                 |
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+| line 1  | 25               |   512*640        | 4.0             |  2.0           |      1          |
+| line 2  |                  |   640*640        | 4.5             |  3.0           |                 |
+| line 3  |                  | 1024*1024        |                 |                |                 |
 
 The parameters in the table above will produce the following `save_names`:
 ```
