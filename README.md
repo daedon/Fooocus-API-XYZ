@@ -11,6 +11,8 @@ Get it:
 ```bash
 git clone https://github.com/daedon/Fooocus-API-XYZ
 ```
+Directory Fooocus-API-XYZ will be created, rename it to whatever you like.
+
 Run it:
 ```bash
 cd Fooocus-API-XYZ
@@ -20,7 +22,7 @@ The generated images will be saved in the Fooocus-API output directory.
 
 ***
 #### Creating a new job
-To create a new job, run xyz with the new job name:
+To create a new job, simply run xyz with the new job name:
 ```bash
 cd Fooocus-API-XYZ
 python3 xyz.py newJobName
