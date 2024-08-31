@@ -122,6 +122,14 @@ To make `sampler_name` one of your variable parameters in myJob,
 * Generate your images.
 * To have `sampler_name` as a varable parameter in all future jobs, make the above changes to the defaults directories.
 
+Three or more...
+---
+Hyphens
+***
+Asterisks
+___
+
+Underscores
 
 ```mermaid
 graph TD;
