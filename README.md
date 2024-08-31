@@ -110,13 +110,14 @@ To reduce repetiion in large permuations and create N images with random seeds, 
 The curl template has close to 100 parameters, only a dozen or so are set up by default.
 
 For example, `sampler_name` is hard coded in the curl job template. 
-
 ```
 "sampler_name": "dpmpp_2m_sde_gpu",
 ```
-
 To make `sampler_name` one of your variable parameters in myJob,
 * edit myJob's curl.template and replace `dpmpp_2m_sde_gpu` with `___sampler_name` (keep the quotes).
+```
+"sampler_name": "___sampler_name",
+```
 * In the `myJob/parms` directory, create a file named `___sampler_name` with your sampler_name values.
 * Generate your images.
 * To have `sampler_name` as a varable parameter in all future jobs, make the above changes to the defaults directories.
