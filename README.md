@@ -37,7 +37,7 @@ In the example below, resolution, guidance_scale and sharpness will automaticall
 "steps" has only one value and won't vary but will be included in `save_name` since it ends with an "_". 
 All permutations of the following parameters will be used to make curl calls to Fooocus-API. 
 
-| FILE NAME       | _0_steps\_       | _1_resolution    |_2_guidance_scale|  _3_sharpness | ___image_number |
+| Parmameter file  | _0_steps\_       | _1_resolution    |_2_guidance_scale|  _3_sharpness | ___image_number |
 |:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
 | line 1  | 25               |   512*640        | 4.0             |  2.0           |      1          |
 | line 2  |                  |   640*640        | 4.5             |  3.0           |                 |
