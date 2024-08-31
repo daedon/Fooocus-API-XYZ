@@ -16,6 +16,8 @@ Run it:
 cd Fooocus-API-XYZ
 python3 xyz.py myJob
 ```
+The generated images will be saved in the Fooocus-API output directory.
+
 ***
 #### Creating a new job
 To create a new job, run xyz with the new job name:
