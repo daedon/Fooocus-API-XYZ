@@ -3,7 +3,7 @@
 
 Requires Fooocus-API installed and running.
 
-***
+
 #### Quick Start
 
 
@@ -16,20 +16,20 @@ Run it:
 cd Fooocus-API-XYZ
 python3 xyz.py myJob
 ```
-Create a new job:
+***
+#### Creating a new job
+To create a new job, run xyz with the new job name:
 ```bash
 cd Fooocus-API-XYZ
-python3 xyz.py jobName
+python3 xyz.py newJobName
 ```
-***
-#### Creating new jobs
-The first time you reference/use a jobName:
-* A directory with the job's name will be created in "Fooocus-API-XYZ/jobs".
+The first time you use a jobName:
+* A directory with the job's name is created in "Fooocus-API-XYZ/jobs".
 * Associated sub-directories will be created.
-* Default files will be copied to "jobs/jobName".
-* You can Add, Modify, Delete the job's parameters in "jobs/jobName/parms".
+* Default files will be copied to "jobs/jobName" (from the `default_` directories).
+* Add, Modify image generation parameters in "jobs/jobName/parms".
 * Customize the curl template "jobs/jobName/curl.template" (each job has it's own template).
-* Set default parameters for `all new jobs created` by editing the default files in the `default_` directories.
+* To set default parameters for `all new jobs created`, edit the files in the `default_` directories.
 ***
 #### Example with 3 variable parameters
 
