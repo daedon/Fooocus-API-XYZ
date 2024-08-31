@@ -21,6 +21,7 @@ Create a new job:
 cd Fooocus-API-XYZ
 python3 xyz.py jobName
 ```
+***
 The first time you reference/use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs".
 * Associated sub-directories will be created.
@@ -28,7 +29,7 @@ The first time you reference/use a jobName:
 * You can Add, Modify, Delete the job's parameters in "jobs/jobName/parms".
 * Customize the curl template "jobs/jobName/curl.template" (each job has it's own template).
 * Set default parameters for `all new jobs created` by editing the default files in the `default_` directories.
-
+***
 ##### Example with 3 variable parameters
 
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The table below contains 5 parameters from the demo job.
@@ -76,6 +77,7 @@ Note the separator `----` between the parameters and the `=` between the paramat
 ```
 myJob_0001----steps=25----resolution=512x512----guidance_scale=4.0----sharpness=2.0----<time stamp>
 ```
+***
 #### Summary: 
 * Fooocus-API-XYZ requires that `Fooocus-API` be running.
 * Fooocus-API-XYZ is data driven. 
@@ -96,15 +98,14 @@ myJob_0001----steps=25----resolution=512x512----guidance_scale=4.0----sharpness=
 * For each permutation, fills the curl template with the current iteration's values (`___parameter`).
 * The current iteration of `curl.template` is written to `runCURL`.
 * `runCURL` is made executable and executed.
-
+***
 #### Configuring
 
 Directory locations and other parameters can be changed in `config.py`.
 
 If `image_number` is set to N, Fooocus will generate N images per curl call with sequential seed numbers.
 To reduce repetiion in large permuations and create N images with random seeds, insert N lines in `___seed` each with a `-1`.
-
-
+***
 #### Customizing
 
 The curl template has close to 100 parameters, only a dozen or so are set up by default.
@@ -122,7 +123,7 @@ To make `sampler_name` one of your variable parameters in myJob,
 * Generate your images.
 * To have `sampler_name` as a varable parameter in all future jobs, make the above changes to the defaults directories.
 
----
+***
 
 ```mermaid
 graph TD;
