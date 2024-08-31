@@ -75,7 +75,7 @@ saveNameCFG = 2: save_name contains both the variable parameter name and value.
 ```
 Parameter separators in save_name can be modified in `config.py`. 
 ```
-myJob_0001_steps=25----resolution=512x512----guidance_scale=4.0----sharpness=2.0_<time stamp>
+myJob_0001`----`steps`=`25`----`resolution`=`512x512`----`guidance_scale`=`4.0`----`sharpness`=`2.0`----`<time stamp>
 ```
 #### Summary: 
 * Fooocus-API-XYZ requires that `Fooocus-API` be running.
