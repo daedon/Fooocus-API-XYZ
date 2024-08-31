@@ -73,8 +73,8 @@ saveNameCFG = 2: save_name contains both the variable parameter name and value.
 1: myJob_0001_25_512x512_4.0_2.0_<time stamp>
 2: myJob_0001_steps_25_resolution_512x512_guidance_scale_4.0_sharpness_2.0_<time stamp>
 ```
-Separators for save_name can be modified in `config.py`. Note the separator `----` between
-the parameters and the `=` between the paramater names and their value.
+Separators for save_name can be modified in `config.py`. 
+Note the separator `----` between the parameters and the `=` between the paramater names and their value.
 ```
 myJob_0001----steps=25----resolution=512x512----guidance_scale=4.0----sharpness=2.0----<time stamp>
 ```
