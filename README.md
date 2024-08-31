@@ -3,7 +3,7 @@ Generates a series of Fooocus images with unrestricted user supplied parameter v
 
 Requires Fooocus-API installed and running.
 
----
+***
 #### Quick Start
 
 
@@ -22,6 +22,7 @@ cd Fooocus-API-XYZ
 python3 xyz.py jobName
 ```
 ***
+#### Creating new jobs
 The first time you reference/use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs".
 * Associated sub-directories will be created.
@@ -30,7 +31,7 @@ The first time you reference/use a jobName:
 * Customize the curl template "jobs/jobName/curl.template" (each job has it's own template).
 * Set default parameters for `all new jobs created` by editing the default files in the `default_` directories.
 ***
-##### Example with 3 variable parameters
+#### Example with 3 variable parameters
 
 Parameter files are located in the `../Fooocus-API-XYZ/jobs/myJob/parms` directory. The table below contains 5 parameters from the demo job.
 The first 3 characters of the parameter file name serve to sort and determine the order the parameters are processed.
