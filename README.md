@@ -8,20 +8,18 @@ Generates a series of Fooocus images with unrestricted user supplied parameter v
 
 
 Get it:
-```
+```bash
 git clone https://github.com/daedon/Fooocus-API-XYZ
 ```
 Run it:
-```
+```bash
 cd Fooocus-API-XYZ
 python3 xyz.py myJob
-
 ```
 Create a new job:
-```
+```bash
 cd Fooocus-API-XYZ
 python3 xyz.py jobName
-
 ```
 The first time you reference/use a jobName:
 * A directory with the job's name will be created in "Fooocus-API-XYZ/jobs".
