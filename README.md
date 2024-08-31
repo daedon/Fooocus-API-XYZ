@@ -2,8 +2,7 @@
 Generates a series of Fooocus images with unrestricted user supplied parameter variations. 
 
 `Requires Fooocus-API installed and running.`
-
-
+---
 #### Quick Start
 
 
